@@ -1,0 +1,9 @@
+body {
+	background: url(wild_oliva.png);
+}
+
+.container {
+	width: 500px;
+	margin: auto auto;
+	text-align: center;
+}

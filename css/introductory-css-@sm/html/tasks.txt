@@ -1,0 +1,5 @@
+open link in new window
+link to image in a folder called img
+link to external image
+change rowspan
+change maxlength

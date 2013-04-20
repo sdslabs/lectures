@@ -1,0 +1,44 @@
+body {
+	background: url(wild_oliva.png);
+	font-family: Ubuntu, Verdana, sans-serif;
+}
+
+.container {
+	width: 600px;
+	margin: auto auto;
+}
+
+.overlay {
+	background: rgba(255,255,255,0.7);
+	width: 500px;
+	padding: 10px 50px 10px 50px;
+	border-radius: 15px 15px;
+}
+
+.container h1, h3, p, form {
+	text-align: center;	
+}
+
+#first {
+	float: left;
+	float: left;
+}
+
+.yoda {
+	text-align: center;
+}
+
+.yoda img{
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+	-webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 40%;
+}
+
+.yoda img:hover {
+	width: 50%;
+}
