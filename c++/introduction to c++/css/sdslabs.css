@@ -1,0 +1,51 @@
+/*********************************************
+ * Color palette
+ * highlight-3: #8ecd61
+ * highlight-2: #f76860
+ * highlight: #5a9ebe
+ * dark: #4a5056 
+ */
+ 
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+ 
+body {
+    counter-reset: slide;
+}
+ 
+body {
+    /* From http://subtlepatterns.com/?p=824 */
+    background-image: url('../img/ricepaper.png'); 
+}
+
+.sdslabs {
+    background-image: url('../img/sdslabs.png');    
+    position: relative;
+    z-index: 500;
+    display: block;
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.reveal .custom-red {
+    color: #EF002A;
+}
+
+.reveal .custom-gray {
+    color: #666666;
+}
+
+.reveal .custom-blue {
+    color: #35C0CD;
+}
+
+.started {
+    background-color: black;
+}
+
+section .large {
+    font-size: 60px;
+    margin-bottom: 50px;
+}

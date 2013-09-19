@@ -1,0 +1,295 @@
+<!doctype html>  
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Introduction to C++</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
+    <!-- <link rel="stylesheet" href="css/print/pdf.css"> -->
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/sdslabs.css">
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <section>
+            <h1>Introduction to C++</h1>
+            <h3>SDSLabs</h3>          
+            <p>
+              <i><small><a href="mailto:satyam.vijay15@gmail.com">- Satyam Vijay</a></small></i> <br>
+              <i><small> <a href="mailto:abhinav.tushar.vs@gmail.com">- Abhinav Tushar</a></small></i> <br>
+            </p>
+          </section>
+          <section>
+            <h2 class="custom-red">What this lecture is all about?</h2>
+            <h3 class="fragment custom-gray">A very basic primer of computer programming <br> using C++ language</h3>
+          </section>
+          <section>
+            <h2 class="custom-red">Why should you learn programming ?</h2>
+            <img src="img/q.png" alt="" class="fragment plain">
+          </section>
+          <section>
+            <h2 class="custom-red">Why should you learn programming ?</h2>
+            <h3 class="fragment">Programming is <span class="custom-blue">Automation</span></h3>
+            <h3 class="fragment">Programming teaches you how to <span class="custom-blue">break problems</span></h3>
+            <h3 class="fragment">It’s a way to <span class="custom-blue">create change</span></h3>
+            <h3 class="fragment">Programming is <span class="custom-red">fun</span></h3>
+          </section>
+          <section>
+            <h2 class="custom-red">Why C++ ?</h2>
+            <h3 class="fragment">Powerful and fast</h3>
+            <h3 class="fragment">It will provide you a better understanding of other systems</h3>
+            <h5 class="fragment custom-red">** <i>You will hardly be seen as a hacker if you don’t know C++</i> **</h5>
+          </section>
+        </section>
+
+        <section data-state="alert">
+
+          <section>
+            <h2>Getting your machines ready</h2>
+            <div class="fragment">
+              <h3>Various <span class="custom-blue">IDEs</span> are available for programmming in C++</h3>
+              <ul>
+              <li class="fragment"><a href="codeblocks.org">CodeBlocks</a> (easy to use, free, cross platform)</li>
+              <li class="fragment"><a href="http://www.eclipse.org/">Eclipse CDT</a> (great but a bit advanced for beginners)</li>
+              <li class="fragment"><a href="http://www.bloodshed.net/devcpp.html">DevC++</a> (windows only)</li>
+              <li class="fragment">and many more . . .</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+          	<h2>Installing CodeBlocks</h2>
+          	<!--installation instructions here-->
+          </section>
+        </section>
+
+        
+        <section>
+          <section>
+            <h2>variables</h2>
+            <h3 class="fragment custom-gray">Store values. </h3>
+            <h2 class="custom-blue fragment">data type variable = value;</h2>
+          </section>
+          <section>
+            <div>
+              <h3>Basic datatypes</h3>
+              <pre><code></code></pre><br>
+            </div>
+          </section>
+          <section>
+            <h2>Naming Conventions</h2>
+            <ul>
+              <li class="fragment">Must start with an alphabet or underscore "_"</li>
+              <li class="fragment">May only be comprised of alpha-numeric characters and underscores. a-z, A-Z, 0-9, or _ </li>
+              <li class="fragment">Cannot use reserved words (keywords), like 'int', 'while' etc as identifiers.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>The Console</h2>
+            <h3 class="fragment">outputing and inputing values</h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Operators</h2>
+            <ul>
+              <li class="fragment">Assignment Operators</li>
+              <li class="fragment">Arithmetic Operators</li>
+              <li class="fragment">Comparison Operators</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="custom-gray">Assignment Operator<br>
+              <span class="custom-red">=</span></h2>
+            <pre><code>
+    int a = 5;
+    char b = 'h';
+
+</code></pre>
+          </section>
+          <section>
+            <h2 class="custom-gray">Arithmetic Operator</h2>
+            <ul>
+              <li>Addition: +</li>
+              <li>Subtraction: -</li>
+              <li>Division: /</li>
+              <li>Multiplication: *</li>
+              <li>Modulus: %</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="custom-gray">Comparison Operator</h2>
+            <ul>
+              <li>Equal To: ==</li>
+              <li>Not Equal To: !=</li>
+              <li>Less Than: &lt;</li>
+              <li>Greater Than: ></li>
+              <li>Less Than or Equal To: &lt;=</li>
+              <li>Greater Than or Equal To: >=</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Conditional statements</h2>
+            <h3 class="custom-red fragment">if, if-else & switch</h3>
+          </section>
+          <section>
+            <h2 class="custom-blue">if</h2>
+          <pre class="fragment"><code>
+  int marks = 100;
+  if (marks==100)
+    cout << "Congrats !! Chapo.";
+
+</code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">if-else</h2>
+          <pre class="fragment"><code>
+  int marks = 88;
+  if (marks==100)
+    cout << "Congrats !! Chapo.";
+  else
+    cout << ":|";
+
+</code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">switch</h2>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>arrays</h2>
+            <h3 class="custom-red fragment">Lots of values in one parent variable</h3>
+            <h2 class="custom-blue fragment">data type array[key] = value;</h2>
+          </section>
+          </section>
+        <section>
+          <section>
+            <h2>loops</h2>
+            <h3 class="custom-red fragment">For, While, Do While</h3>
+          </section>
+          <section>
+            <h2 class="custom-red">For Loop</h2>
+            <pre><code>
+  for (initialize; conditional statement; update){
+     do this code;
+  }
+  </code></pre>
+            <pre class="fragment"><code>
+  int years[4] = {2002, 2007, 2010, 2013};
+
+  for (int i = 0; i < 4; i++){
+  	 cout << years[i] << "\n";
+  }
+            </code></pre>
+          </section>
+          <section>
+            <h2 class="custom-red">While Loop</h2>
+            <pre><code>
+  while (conditional statement is true) {
+    //do this code;
+  }
+  </code></pre>
+            <pre class="fragment"><code>
+  int years[4] = {2002, 2007, 2010, 2013};
+
+  int i = 0;
+  while(i<4){
+  	 cout << years[i] << "\n";
+  	 i += 1;
+  }
+            </code></pre>
+          </section>
+          <section>
+            <h2 class="custom-red">Do While</h2>
+            <pre class="fragment"><code>
+  int years[4] = {2002, 2007, 2010, 2013};
+
+  int i = 0;
+  do{
+  	 cout << years[i] << "\n";
+  	 i += 1;
+  }
+  while(i < 4);
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>Further Learning</h2>
+          <h3>Try solving problems on Codevillage, Spoj.pl . . </h3>
+          <h3><a href="http://www.wibit.net/curriculum/the_c_lineage/programming_cpp">Wibit</a></h3>
+          <h3><a href="http://www.learncpp.com/">LearnCpp</a></h3>
+          <h3><a href="http://www.cplusplus.com/">CPlusPlus</a></h3>
+          <h4 class="fragment">Google what are <span class="custom-blue">functions</span> and how to use them, and what is <span class="custom-blue">Object Oriented Programming</span></h4>
+        </section>
+
+      </div>
+      
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        ]
+      });
+      
+    </script>
+
+  </body>
+</html>
