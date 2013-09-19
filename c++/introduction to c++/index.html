@@ -99,11 +99,20 @@
             <h2>variables</h2>
             <h3 class="fragment custom-gray">Store values. </h3>
             <h2 class="custom-blue fragment">data type variable = value;</h2>
+            <h2 class="fragment">int x = 34;</h2>
           </section>
           <section>
             <div>
               <h3>Basic datatypes</h3>
-              <pre><code></code></pre><br>
+              <ul>
+              	<li ><span class="custom-blue">char</span> : -128 to 127, <span class="custom-red">1 byte</span></li>
+              	<li ><span class="custom-blue">short</span> : -32768 to 32767, <span class="custom-red">2 bytes</span></li>
+              	<li ><span class="custom-blue">int</span> : -2147483648 to 2147483647, <span class="custom-red">4 bytes</span></li>
+              	<li ><span class="custom-blue">float</span> : +/- 3.4x10<sup>(+/- 38)</sup>, <span class="custom-red">4 bytes</span></li>
+              	<li ><span class="custom-blue">double</span> : +/- 1.7x10<sup>(+/- 308)</sup>, <span class="custom-red">8 bytes</span></li>
+              	<li ><span class="custom-blue">bool</span> :true or false, <span class="custom-red">1 byte</span></li>
+              </ul><br><br>
+              <h4 class="fragment custom-red">Nothing to be remembered here, just a bit <i>show-off</i></h4>
             </div>
           </section>
           <section>
@@ -113,13 +122,6 @@
               <li class="fragment">May only be comprised of alpha-numeric characters and underscores. a-z, A-Z, 0-9, or _ </li>
               <li class="fragment">Cannot use reserved words (keywords), like 'int', 'while' etc as identifiers.</li>
             </ul>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>The Console</h2>
-            <h3 class="fragment">outputing and inputing values</h3>
           </section>
         </section>
         <section>
@@ -162,6 +164,39 @@
             </ul>
           </section>
         </section>
+
+        <section>
+          <section>
+            <h2>The Console</h2>
+            <h3 class="fragment">outputting and inputting values</h3>
+            <h3 class="fragment">using cout and cin</h3>
+            <pre class="fragment"><code>
+    #include&ltiostream&gt
+
+</code></pre>
+          </section>
+          <section>
+          	<h2>Cout</h2>
+          	<h3 class="fragment custom-blue">prints values to console</h3>
+          	<pre class="fragment"><code>
+    cout << "Hello";
+          	</code></pre>
+          	<pre class="fragment"><code>
+    int x = 5;
+    cout << "Hello, x = " << x;
+          	</code></pre>
+          </section>
+          <section>
+          	<h2>Cin</h2>
+          	<h3 clas="fragment custom-blue">takes user value from console and saves it to a variable</h3>
+          	<pre class="fragment"><code>
+    int number;
+    cin >> number;
+    int twice_of_number = number * 2;
+    cout << twice_of_number;
+          	</code></pre>
+          </section>
+        </section>
         <section>
           <section>
             <h2>Conditional statements</h2>
@@ -189,15 +224,53 @@
           </section>
           <section>
             <h2 class="custom-blue">switch</h2>
+            <pre class="fragment"><code>
+  switch (x) {
+  case 1:
+    cout << "x is 1";
+    break;
+  case 2:
+    cout << "x is 2";
+    break;
+  default:
+    cout << "value of x unknown";
+  }
+
+</code></pre>
           </section>
         </section>
         <section>
           <section>
             <h2>arrays</h2>
             <h3 class="custom-red fragment">Lots of values in one parent variable</h3>
-            <h2 class="custom-blue fragment">data type array[key] = value;</h2>
+            <h5 class="fragment custom-blue">Remember indexed values ?? Maths</h5>
+            <img class="fragment" src="img/arr math.jpg">
+            <h4 class="fragment">the elements collectively are called an 'array' of elements</h4>
+            <img class="fragment" src="img/arr.jpg">
           </section>
+          <section>
+          	<h2>creating arrays</h2>
+          	<h3 class="fragment custom-blue">data type array[length]</h3>
+          	<pre class="fragment"><code>
+  int arr[3];
+  arr[0] = 34;
+  arr[1] = 54;
+  arr[2] = 13;
+  </code></pre>
+  			<pre class="fragment"><code>
+  int arr[3] = {34, 54, 13};
+  </code></pre>
           </section>
+          <section>
+          	<h2>accessing array members</h2>
+          	<h3 class="fragment">array[index]</h3>
+          	<pre class="fragment"><code>
+  char y = 'c';
+  char array[4] = {'a', 'b', 'f', 'd'};
+  array[2] = y; // now array is {'a', 'b', 'c', 'd'}
+  </code></pre>
+          </section>
+        </section>
         <section>
           <section>
             <h2>loops</h2>
@@ -248,6 +321,29 @@
   while(i < 4);
             </code></pre>
           </section>
+        </section>
+        <section>
+          <h2>The Program structure</h2>
+          <pre class="fragment"><code>
+    /*
+    	C++ Program
+    	Author SDSLabs
+    */
+    
+    #include&ltiostream&gt
+    //include the header files u need here
+
+    using namespace std;
+
+    int main() // it all begins from here
+    {
+    	//ur code here
+    	return 0;
+    }
+
+</code></pre>
+
+		<h3 class="fragment custom-red">Do write comments. It helps when u revisit the code to make changes</h4>
         </section>
         <section>
           <h2>Further Learning</h2>
