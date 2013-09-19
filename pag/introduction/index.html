@@ -1,0 +1,440 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Programming And Algorithms</title>
+
+		<meta name="description" content="Open Lecture">
+		<meta name="author" content="Programming And Algorithms">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/default.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>PAG</h1>
+					<img class="image" src="pag.png" style="height:350px;"></img>
+				</section>
+				
+				<section>
+					<h2>WHAT IS AN ALGORITHM?</h2>
+					<p>
+						Algorithms are precise step-by-step instructions on how to accomplish a desired task.
+					</p>
+					
+
+					
+				</section>
+				
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Examples in real life</h2>
+						
+						<a href="#/2/1" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section >
+						<h2>Finding the gcd of two numbers (a,b)</h2>
+   					    <img class="image" src="gcd.png" style="height:350px;"></img>
+					</section>
+					<section >
+						<h2>Cryptography</h2>
+   					    <img class="image" src="crypto.png" style="height:350px;"></img>
+					</section>
+					<section >
+						<h2>Directions(GPS system)</h2>
+   					    <img class="image" src="gps.png" style="height:350px;"></img>
+					</section>
+					
+					
+				</section>
+				<section>
+					<h2>Why algorithm?</h2>
+					<ul>
+						<li class= "fragment">To carry out some process systematically</li>
+						<li class= "fragment"> Amongst all possible ways to perform a particular task we need to select the best one</li>
+						<li class= "fragment"> Most problems are complex Hard to see entire solution from outset </li>
+						
+					</ul>				
+				</section>
+
+				<section>
+				
+				   <section>
+					<h2>GCD (Euclid’s Algorithm)</h2>
+					<p>
+						Find the Greatest Common Divisor of two natural numbers Positive integers (a,b) 
+					</p>
+					
+				   </section>
+				   
+				   
+				   <section data-markdown>
+					## Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;gcd-code&gt;
+  ## Algorithm
+
+  While b!=0
+    t=b
+    b=a mod b
+    a=t
+  return a   
+&lt;/gcd-code&gt;
+					</code></pre>
+				</section>
+					
+					
+				</section>
+                <section>
+                              		<h1></h1>
+                  
+                <h3>Now try your hands on a problem</h3>
+                                  
+                </section>
+				<section>
+      			  <section>
+					<h2>Binary Search</h2>
+					<p>
+					Binary search is like looking up a phone number or  a word in the dictionary
+					</p>
+					<img class="image" src="td.png" style="height:100px;"></img>
+					<ul>
+						<li class= "fragment">Start in middle of book</li>
+						<li class= "fragment"> If name you're looking for comes before names on page, look in first half</li>
+						<li class= "fragment"> Otherwise, look in second half </li>
+						
+					</ul>
+					
+ 				  </section>
+ 				  
+			      <section data-markdown>
+					## Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;binarysearch&gt;
+  ## Algorithm
+
+  If ( value == middle element ) 
+    value is found 
+       else if ( value < middle element ) 
+    search left-half of list with the same method 
+       else       search right-half of list with the same method  
+&lt;/binarysearch&gt;
+					</code></pre>
+				</section>
+				
+				
+				<section data-markdown>
+					## Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;binarysearch&gt;
+  ## Algorithm
+
+  Case 1:   val == a[mid]
+    val = 10
+    low = 0, high = 8
+    mid = (0 + 8) / 2 = 4
+       
+&lt;/binarysearch&gt;
+					</code></pre>
+					<img class="image" src="bs1.png" style="height:150px;width:400px;"></img>
+				</section>
+				
+				<section data-markdown>
+					## Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;binarysearch&gt;
+  ## Algorithm
+
+  Case 2:   val > a[mid]
+    val = 19
+  low = 0, high = 8
+  mid = (0 + 8) / 2 = 4	
+  new low = mid+1 = 5
+       
+&lt;/binarysearch&gt;
+					</code></pre>
+					<img class="image" src="bs2.png" style="height:150px;width:400px;"></img>
+				</section>
+				
+				
+				<section data-markdown>
+					## Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;binarysearch&gt;
+  ## Algorithm
+
+  Case 3:   val < a[mid]
+   val = 7
+  low = 0, high = 8
+  mid = (0 + 8) / 2 = 4	
+  new high = mid-1 = 3
+       
+&lt;/binarysearch&gt;
+					</code></pre>
+					<img class="image" src="bs3.png" style="height:150px;width:400px;"></img>
+				</section>
+				
+				<section>
+					<img class="image" src="bs4.png" style="height:450px;"></img>
+
+ 			     </section>
+
+			</section>
+			
+			<section>
+            		<h1></h1>
+                  <h3>Problem Revisited...</h3>
+              </section>
+				<section>
+					<h1>INSERTION SORT</h1>
+					
+				</section>
+
+				<section >
+					<p>The Idea of the insertion sort is similer to the Idea of sorting the Playing cards .</p>
+					<img class="image" src="cards.png" style="height:500px;"></img>
+				</section>
+
+				<section >
+					<h2>Insertion Sort</h2>
+					<ul>
+						<li class= "fragment">while some elements unsorted:</li>
+						<ul>
+						<li class= "fragment">Using linear search, find the location in the sorted portion where the 1st element of the unsorted portion should be inserted </li>
+						<li class= "fragment">Move all the elements after the insertion location up one position to make space for the new element </li>
+				         </ul>
+						
+					</ul>
+					
+				</section>
+				<section>
+						<img class="image" src="sort.png" style="height:450px;"></img>
+									
+				</section>
+				
+				
+			
+
+<section data-markdown>
+					## Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;insertionsort&gt;
+  ## Algorithm
+
+  	INSERTION-SORT (A)
+1  for j <- 2 to length[A]
+2       do key <- A[j]
+3         Insert A[j] into the sorted sequence A[1 . . j - 1].
+4        i <- j - 1
+5        while i > 0 and A[i] > key
+6           do A[i + 1] <- A[i]
+7              i <- i - 1
+8        A[i + 1] <- key
+
+       
+&lt;/insertionsort&gt;
+					</code></pre>
+				</section>
+
+<!--
+				<section>
+					<section data-state="alert">
+						<h2>Global State</h2>
+						<p>
+							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+							will be added as a class to the document element when the slide is open. This lets you
+							apply broader style changes, like switching the background.
+						</p>
+						<a href="#/7/1" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-state="blackout">
+						<h2>"blackout"</h2>
+						<a href="#/7/2" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-state="soothe">
+						<h2>"soothe"</h2>
+						<a href="#/7/0" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section data-state="customevent">
+					<h2>Custom Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+					</blockquote>
+				</section>
+				
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+    
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+				
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Fragmented Views</h2>
+					<p>Hit the next arrow...</p>
+					<p class="fragment">... to step through ...</p>
+					<ol>
+						<li class="fragment"><code>any type</code></li>
+						<li class="fragment"><em>of view</em></li>
+						<li class="fragment"><strong>fragments</strong></li>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>Spectacular image!</h2>
+					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
+						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png" alt="BreakDOM game screenshot">
+					</a>
+				</section>
+				
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+					<script>
+						document.getElementById('slideshare').attributeName = 'allowfullscreen';
+					</script>
+				</section>
+				
+				<section>
+					<h2>Stellar Links</h2>
+					<ul>
+						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
+						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
+						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+					</ul>
+				</section>
+				-->
+				
+			<section>
+			            		<h1></h1>
+
+                  <h3>Optimal solution to the problem</h3>
+              </section>
+				<section >
+					<h1>THE END</h1>
+					<a href="http://pag.sdslabs.co/blog/">http://pag.sdslabs.co/blog/</a>
+					<a href="https://www.facebook.com/groups/sdspag/">https://www.facebook.com/groups/sdspag/</a>
+					<a href="https://www.facebook.com/sdspag/">https://www.facebook.com/sdspag/</a>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>
