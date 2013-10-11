@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript | SDSLabs</title>
+        <link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="components/reveal.js/css/theme/default.css">
+        <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
+        <script src="components/jquery/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>Javascript</h1>
+                        <h3>SDSLabs</h3>
+                        <p>
+                            <i><small><a href="mailto:dvjbndlsh93@gmail.com">dvjbndlsh93@gmail.com</a></small></i><br>
+                            <i><small><a href="mailto:abhikandoi2000@gmail.com">abhikandoi2000@gmail.com</a></small></i>
+                        </p>
+                    </section>
+                    <section>
+                        <div>Use our fb group whenever you have any doubt and we promise a quick reply</div>
+                        <div><a>https://www.facebook.com/groups/SDSWebDev</a></div>
+                    </section>
+                    <section>
+                        <h2>Why learn javascript?</h2>
+                        <p>
+                            <i class="fragment">Every single website uses javascript for some cool UI effects</i><br>
+                            <i class="fragment">You control audio and video on the web using javascript</i><br>
+                            <i class="fragment">Almost anything that moves within a website is done using javascript</i>
+                            <i class="fragment">Because javascript can do this:</i>
+                        </p>
+                        <img class="fragment" src="img/game.jpg" style="position:relative;left:0px;top:0px;" id="game">
+                        <script>
+                            $(document).on('keydown', function (e) {
+                                var key = e.which;
+                                console.log(key);
+                                if (key == 81) {
+                                    $('#game').animate({
+                                        left: "+=50"
+                                    }, 100);
+                                }
+                                else if (key == 82) {
+                                    $('#game').animate({
+                                        left: "-=50"
+                                    }, 100);
+                                }
+                                else if (key == 87) {
+                                    $('#game').animate({
+                                        top: "-=50"
+                                    }, 100);
+                                }
+                                else if (key == 69) {
+                                    $('#game').animate({
+                                        top: "+=50"
+                                    }, 100);
+                                }
+                            });
+                        </script>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Using javascript in your html page</h2>
+                        <p>The &lt;script&gt; tag</p>
+                        <p class="fragment">There are two options</p>
+                    </section>
+                    <section>
+                        <div>Option 1</div>
+<pre><code>&lt;script&gt;
+  var x = 10;
+  // Some Really cool code that proves that
+  // you are batman
+&lt;/script&gt;</code></pre>
+                        <div><br></div>
+                        <div>Option 2 - src attribute</div>
+                        <pre><code>&lt;script src=&quot;filename.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    </section>                    
+                </section>
+                <section>
+                    <section>
+                        <h2>Javascript Basics</h2>
+                        <p>How is it different from cpp?</p>
+                        <p class="fragment">It is much easier to understand and write</p>
+                    </section>
+                    <section>
+                        <h3>Variables</h3>
+                        <p>Variables do not have any type</p>
+<pre class="fragment"><code>var num = 10;
+var pi = 3.1415;
+var str = 'A string';
+var arr = ['All', 'Hail', 'var', '!'];
+var func = function (a, b) {
+  return a + b;
+};</code></pre>
+                        <p class="fragment">Even functions are defined this way!</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Document Object Model (DOM)</h2>
+                        <p>The DOM defines a standard way for accessing and manipulating HTML documents.</p>
+                        <p class="fragment">Using layout engines, a web browser converts HTML to DOM.</p>
+                        <p class="fragment">This DOM provides methods to manipulate the data.</p>       
+                    </section>
+                    <section>
+                        <h2>DOM Nodes</h2>
+                        <img class="fragment" src="img/htmltree.jpg">
+                        <p class="fragment">Everything in an html document is represented as a node. These nodes share a basic hierarchical relationship.</p>
+                        <!-- Explain parent, child and sibling here -->
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Manipulating the DOM</h2>
+                        <!-- Say this is where js comes in and allows you to manipulate this DOM -->
+                        <p>Javascript provides access to DOM and allows to manipulate it. This includes stuff like:</p>
+<pre class="fragment"><code>document.getElementById('special').onclick = someCoolFunction();
+document.getElementsByClass('damn')[0].innerHTML = 'This is way too much!';
+document.getElementsByTagName('why')[0].css = "I'm out of here!";
+</code></pre>
+                        <img class="fragment" src="img/jsmother.jpg">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Introducing jQuery</h2>
+                        <p>A Javasciprt library that makes everyone's lives a lot easier</p>
+                        <o>It has predefined methods for much simpler DOM traversal and manipulation</p>
+                        <pre class="fragment"><code>&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</code></pre>
+                        <p class="fragment">Include this in the head element and you're all set to write some cool effects</p>
+                    </section>
+                    <section>
+                        <h2>$ - jQuery function</h2>
+<pre><code>$('#special').on('click', function () {
+  $('#mydiv').append( 'Hello World!' );
+});</code></pre><br>
+                        <p class="fragment">The Flow:</p>
+                        <ul>
+                            <li class="fragment">You pass a css selector to the &quot;$&quot; function</li>
+                            <li class="fragment">This returns a DOM object which has various methods</li>
+                            <li class="fragment">We add event listeners for various possible events for the DOM</li>
+                            <li class="fragment">These event listeners call functions (known as callbacks) whenever these events are triggered</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Events in javascript</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Callbacks</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Some more examples</h2>
+                    </section>
+                    <section>
+                        <h3>A Click Counter</h3>
+<pre class="fragment"><code>var click = 0;
+$('#counter').on('click', function () {
+  click = click + 1;
+  $('#count').html(click);
+});</pre></code><br>
+                        <div id='counter' class='fragment'><a>Click Me</a></div>
+                        <div class='fragment'><span id='count'>0</span> Clicks</div>
+                        <script>
+                            var click = 0;
+                            $('#counter').on('click', function () {
+                                click = click + 1;
+                                $('#count').html(click);
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3 id="starTrigger">Some size or fadeout animation goes here</h3>
+                    </section>
+                    <section>
+                        <h3>Super Mario on JS Steroids</h3>
+<pre class="fragment"><code>$(document).on(&quot;keydown&quot;, function (e) {
+  var key = e.which;
+  if (key == 81) {
+    $('#game').animate({
+      left: "+=50"
+    }, 100);
+  }
+  else if (key == 82) {
+    $('#game').animate({
+      left: "-=50"
+    }, 100);
+  }
+  else if (key == 87) {
+    $('#game').animate({
+      top: "-=50"
+    }, 100);
+  }
+  else if (key == 69) {
+    $('#game').animate({
+      top: "+=50"
+    }, 100);
+  }
+});</code></pre>
+                        <div><img id="game1" style="position:relative;" src="img/game.jpg"></div>
+                        <script>
+                            $(document).on('keydown', function (e) {
+                                var key = e.which;
+                                console.log(key);
+                                if (key == 81) {
+                                    $('#game1').animate({
+                                        left: "+=50"
+                                    }, 100);
+                                }
+                                else if (key == 82) {
+                                    $('#game1').animate({
+                                        left: "-=50"
+                                    }, 100);
+                                }
+                                else if (key == 87) {
+                                    $('#game1').animate({
+                                        top: "-=50"
+                                    }, 100);
+                                }
+                                else if (key == 69) {
+                                    $('#game1').animate({
+                                        top: "+=50"
+                                    }, 100);
+                                }
+                            });
+                        </script>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>
+                            Form Validation
+                        </h2>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <script src="components/reveal.js/js/reveal.min.js"></script>
+        <script src="components/reveal.js/lib/js/head.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                dependencies: [
+                    { src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
