@@ -70,8 +70,7 @@
                         <div>Option 1</div>
 <pre><code>&lt;script&gt;
   var x = 10;
-  // Some Really cool code that proves that
-  // you are batman
+  // Some really cool and badass code
 &lt;/script&gt;</code></pre>
                         <div><br></div>
                         <div>Option 2 - src attribute</div>
@@ -129,7 +128,7 @@ document.getElementsByTagName('why')[0].css = "I'm out of here!";
                         <p>A Javasciprt library that makes everyone's lives a lot easier</p>
                         <o>It has predefined methods for much simpler DOM traversal and manipulation</p>
                         <pre class="fragment"><code>&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</code></pre>
-                        <p class="fragment">Include this in the head element and you're all set to write some cool effects</p>
+                        <p class="fragment">Include this in the head element and you're all set to write some awesome javascript</p>
                     </section>
                     <section>
                         <h2>$ - jQuery function</h2>
@@ -139,20 +138,52 @@ document.getElementsByTagName('why')[0].css = "I'm out of here!";
                         <p class="fragment">The Flow:</p>
                         <ul>
                             <li class="fragment">You pass a css selector to the &quot;$&quot; function</li>
-                            <li class="fragment">This returns a DOM object which has various methods</li>
+                            <li class="fragment">This returns a DOM object which has various methods and events</li>
                             <li class="fragment">We add event listeners for various possible events for the DOM</li>
                             <li class="fragment">These event listeners call functions (known as callbacks) whenever these events are triggered</li>
                         </ul>
                     </section>
-                </section>
-                <section>
                     <section>
                         <h2>Events in javascript</h2>
+                        <p>
+                            DOM Events represent any way in which the user may interact with the DOM. It may be a<br>
+                            <i class="fragment">Click</i><br>
+                            <i class="fragment">Double Click</i><br>
+                            <i class="fragment">Scroll</i><br>
+                            <i class="fragment">Keyboard keypress</i><br>
+                        </p>
                     </section>
                 </section>
                 <section>
                     <section>
+                        <h2>Now hold up!</h2>
+                        <pre class="fragment"><code>$('#special').on('click', function () {
+  $('#mydiv').append( 'Hello World!' );
+});</code></pre>
+                        <img class="fragment" src="img/inception.jpg">
+                        <p class="fragment">What does that even mean?</p>
+                    </section>
+                    <section>
                         <h2>Callbacks</h2>
+                        <p>This is best illustrated with an example</p>
+<pre class="fragment"><code>var sum = function (a, b) {
+  return a + b;
+};
+var s = sum(10, 20);
+$('#sum').append(s);</code></pre>
+<pre class="fragment"><code>var sum = function (a, b, callback) {
+  callback(a + b);
+};
+sum(10, 20, function (s) {
+  $('#sum').append(s);
+);</code></pre>
+                        <p class="fragment">So callbacks are associated with asynchronous programming</p>
+                    </section>
+                    <section>
+                        <p>In the previous example:</p>
+                        <pre><code>$('#special').on('click', function () {
+  $('#mydiv').append( 'Hello World!' );
+});</code></pre>
                     </section>
                 </section>
                 <section>
@@ -177,7 +208,21 @@ $('#counter').on('click', function () {
                         </script>
                     </section>
                     <section>
-                        <h3 id="starTrigger">Some size or fadeout animation goes here</h3>
+                        <h3>Fadeout and Fadein</h3>
+                        <p>This is going to be legen...</p>
+                        <p id="fade"><a>Wait for it!</a></p>
+                        <p id="hidden" class="hidden">..dary, legendary.</p>
+                        <pre class="fragment"><code>$('#fade').click(function () {
+  $('#fade').fadeOut('slow');
+  $('#dary').fadeIn('slow');
+});</code></pre>
+                        <script>
+                            $('.hidden').hide();
+                            $('#fade').click(function () {
+                                $('#fade').fadeOut('slow');
+                                $('#hidden').fadeIn('slow');
+                            });
+                        </script>
                     </section>
                     <section>
                         <h3>Super Mario on JS Steroids</h3>
@@ -208,7 +253,6 @@ $('#counter').on('click', function () {
                         <script>
                             $(document).on('keydown', function (e) {
                                 var key = e.which;
-                                console.log(key);
                                 if (key == 81) {
                                     $('#game1').animate({
                                         left: "+=50"
@@ -236,9 +280,43 @@ $('#counter').on('click', function () {
                 <section>
                     <section>
                         <h2>
-                            Form Validation
+                            A Practical use for Form Validation
                         </h2>
+                        <p>Say you have a simple form</p>
+<pre><code>&lt;form id=&quot;registration&quot;&gt;
+  Name: &lt;input id=&quot;name&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+  Email: &lt;input id=&quot;email&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+  Password: &lt;input id=&quot;pass&quot; type=&quot;password&quot;&gt;&lt;br&gt;
+  Confirm Password: &lt;input id=&quot;cpass&quot; type=&quot;password&quot;&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
                     </section>
+                    <section>
+                        <h3> The Code </h3>
+<pre><code>$('#registration').on('submit', function () {
+  // Get all the details from the form
+  var name = $('#name').val();
+  var email = $('#email').val();
+  var pass = $('#pass').val();
+  var cpass = $('#cpass').val();
+
+  // Check for full name
+  if (name.indexOf(' ') == -1) {
+    alert('Please enter full name!');
+    return false;
+  }
+  // Check whether both passwords match
+  else if (pass != cpass) {
+    alert('Both passwords do not match!');
+    return false;
+  }
+});</pre></code>
+                    </section>
+                </section>
+                <section>
+                    <h2>Any Questions?</h2>
+                    <p>Go on, We won't bite</p>
                 </section>
             </div>
         </div>
