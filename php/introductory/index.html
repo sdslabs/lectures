@@ -25,11 +25,7 @@
         <section>
           <section>
             <h1>php</h1>
-            <h3>SDSLabs</h3>          
-            <p>
-              <i><small>- Abhishek Das</small></i> <br>
-              <i><small> <a href="mailto:das.abhshk@gmail.com">das.abhshk@gmail.com </a></small></i> <br>
-            </p>
+            <h3>SDSLabs</h3>
           </section>
           <section>
             <h2 class="custom-red">What does it stand for?</h2>
@@ -44,52 +40,24 @@
             <h2 class="custom-red">Why use it?</h2>
             <h3 class="fragment">WRITE <span class="custom-blue">DYNAMICALLY GENERATED PAGES</span> QUICKLY.</h3>
             <h4 class="fragment custom-gray">GENERATED AT THE TIME OF ACCESS BY A USER OR <br />CHANGE AS A RESULT OF INTERACTION WITH THE USER.</h4>
+            <img src="img/client-server-model.png" alt="" class=" fragment plain">
           </section>
           <section>
             <h2 class="custom-red">How does it work?</h2>
             <h3 class="fragment">PHP IS A <span class="custom-blue">SERVER-SIDE</span> LANGUAGE.</h3>
-            <h4 class="fragment custom-gray">PROCESSING TAKES PLACE ON THE SERVER & HTML IS RETURNED TO THE BROWSER.</h4>
+            <h4 class="fragment custom-gray">PROCESSING TAKES PLACE ON THE SERVER &amp; HTML IS RETURNED TO THE BROWSER.</h4>
             <img src="img/server-client.svg" alt="" class=" fragment plain">
           </section>
         </section>
 
-        <section data-state="alert">
-
+        <section>
           <section>
-            <h2>Installation for Windows</h2>
+            <h2>Installation</h2>
             <div class="fragment">
-              <h3>Set up XAMPP server</h3>
-              <a href="http://goo.gl/ZTvJL">http://goo.gl/ZTvJL</a>
-              <br /><img src="img/xampp.png" alt="">
+              <p>Refer to <a href="https://redmine.sdslabs.co.in/projects/resource/wiki/Ubuntu_Packages_to_Install"><span class="custom-blue">Resource Wiki</span></a></p>
             </div>
           </section>
-
-          <section>
-            <img src="img/2.png" alt="">
-          </section>
-
-          <section>
-            <img src="img/3.png" alt="">
-          </section>
-
-          <section>
-            <img src="img/4.png" alt="">
-          </section>
-
-          <section>
-            <img src="img/5.png" alt="">
-          </section>
-
-          <section>
-            <img src="img/6.png" alt="">
-          </section>
-
-          <section>
-            <img src="img/7.png" alt="">
-          </section>
-
         </section>
-
         <section>
           <section>
             <h2>Write</h2>
@@ -100,22 +68,25 @@
               <p>Every statement has to be terminated with a <span class="custom-red">semicolon</span>.</p>
             </div>
             <pre class="fragment"><code>&lt;?php
-    echo &quot;hello world!&quot;;
+  // code goes here
 ?&gt;</code></pre>
+          <div class="fragment">
+            <p>Save the file with <span class="custom-red">php</span> extension.</p>
+          </div>
           </section>
           <section>
-            <h2>Save</h2>
+            <h2>How to see a php file in action?</h2>
             <div class="fragment">
-              <p>Save your files with the extension <span class="custom-red">.php</span> in <code>C://xampp/htdocs/</code></p>
+              <p><span class="custom-blue">Demonstration time.</span></p>
             </div>
           </section>
           <section>
-            <h2>See</h2>
+            <h2>What happens if the URL points to a directory?</h2>
             <div class="fragment">
-              <p>Open up your browser and go to <span class="custom-red">localhost/&lt;filename>.php</span></p>
+              <p>If the URL points to a directory rather than a file, the server will serve a default page <span class="custom-blue">index.php</span> within that directory.</p>
             </div>
             <div class="fragment">
-              <p>If URL points to a directory rather than filename, server serves a default page <span class="custom-blue">index.php</span>.</p>
+              <small>For eg: By default <span class="custom-blue">http://localhost/bourbon/</span> points to <span class="custom-blue">http://localhost/bourbon/index.php</span></small>
             </div>
           </section>
         </section>
@@ -147,10 +118,10 @@
           <section>
             <h2>Naming Conventions</h2>
             <ul>
-              <li class="fragment">Must start with a letter or underscore "_"</li>
-              <li class="fragment">May only be comprised of alpha-numeric characters and underscores. a-z, A-Z, 0-9, or _ </li>
+              <li class="fragment"><span class="custom-red">Must start with a letter or underscore "_"</span></li>
+              <li class="fragment"><span class="custom-red">May only be comprised of alpha-numeric characters and underscores ie. a-z, A-Z, 0-9, or _</span></li>
               <li class="fragment">More than one word should be separated with underscores, e.g. $my_variable</li>
-              <li class="fragment">More than one word can also be distinguished with capitalization, $myVariable</li>
+              <li class="fragment">More than one word can also be distinguished by using camelCase, $myVariable</li>
             </ul>
           </section>
         </section>
@@ -170,7 +141,7 @@
 ?></code></pre>
           <pre class="fragment"><code>&lt;?php
   echo 5;
-  echo 'hello world';
+  echo "hello world";
 ?></code></pre>
           <pre class="fragment"><code>&lt;?php
   echo 5+15;
@@ -178,228 +149,180 @@
 ?></code></pre>
           </section>
         </section>
+
         <section>
           <section>
-            <h2>Operators</h2>
+            <h2>Unique to PHP</h2>
             <ul>
-              <li class="fragment">Assignment Operators</li>
-              <li class="fragment">Arithmetic Operators</li>
-              <li class="fragment">Comparison Operators</li>
               <li class="fragment">String Operators</li>
-              <li class="fragment">Combination Arithmetic & Assignment Operators</li>
+              <li class="fragment">Foreach Loop</li>
+              <li class="fragment">Associative Arrays</li>
             </ul>
-          </section>
-          <section>
-            <h2 class="custom-gray">Assignment Operator<br>
-              <span class="custom-red">=</span></h2>
-            <pre><code>&lt;?php
-    $a = 5;
-    $b = 'hello world';
-?></code></pre>
-          </section>
-          <section>
-            <h2 class="custom-gray">Arithmetic Operator</h2>
-            <ul>
-              <li>Addition: +</li>
-              <li>Subtraction: -</li>
-              <li>Division: /</li>
-              <li>Multiplication: *</li>
-              <li>Modulus: %</li>
-            </ul>
-          </section>
-          <section>
-            <h2 class="custom-gray">Comparison Operator</h2>
-            <ul>
-              <li>Equal To: ==</li>
-              <li>Not Equal To: !=</li>
-              <li>Less Than: &lt;</li>
-              <li>Greater Than: ></li>
-              <li>Less Than or Equal To: &lt;=</li>
-              <li>Greater Than or Equal To: >=</li>
-            </ul>
-          </section>
-          <section>
-            <h2 class="custom-gray">String Operator <br><span class="custom-red">.</span></h2>
-            <pre><code>&lt;?php
-    $a = 'hello';
-    $b = 'world';
-    $c = $a.$b;
-?></code></pre>
           </section>
         </section>
+
         <section>
           <section>
-            <h2>Conditional statements</h2>
-            <h3 class="custom-red fragment">if, if-else & switch</h3>
-          </section>
-          <section>
-            <h2 class="custom-blue">if</h2>
-          <pre class="fragment"><code>&lt;?php
-  $a = 'hello';
-  if ($a=='hello')
-    echo 'YES';
-?></code></pre>
-          </section>
-          <section>
-            <h2 class="custom-blue">if-else</h2>
-          <pre class="fragment"><code>&lt;?php
-  $a = 'hello';
-  if ($a=='hello')
-    echo 'YES';
-  else
-    echo 'NO';
-?></code></pre>
-          </section>
-          <section>
-            <h2 class="custom-blue">switch</h2>
-          <pre class="fragment"><code>&lt;?php
-  $a = 1;
-  switch ($a) {
-    case 1 :    echo 'ONE';
-                break;
-    case 2 :    echo 'TWO';
-                break;
-    default :   echo 'RANDOM';
-  }
-?></code></pre>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>functions</h2>
-            <h3 class="custom-red fragment">Block of code being used multiple times</h3>
-          </section>
-          <section>
-            <h3>No parameters</h3>
-            <pre><code>&lt;?php
-  function greet() {
-    echo "hello world";
-  }
-  greet();
-?></code></pre><br>
+            <h2 class="custom-blue">String Operators</h2>
             <div class="fragment">
-              <h3>With parameters</h3>
-              <pre><code>&lt;?php
-    function greet($a) {
-      echo "hello $a!";
-    }
-    $a = 'Ravi';
-    greet($a);
-    greet('Nisha');
-  ?></code></pre>
+              <p><span class="custom-red">Concatenation</span> means connecting/joining things</p>
             </div>
           </section>
           <section>
-            <h3>Returning Values</h3>
+            <h2 class="custom-gray">Concatenation Operator<br><span class="custom-red">.</span></h2>
             <pre><code>&lt;?php
-  function sum($a, $b) {
-    return $a+$b;
-  }
-  $total = sum(2,3);
-  echo $total;
-?></code></pre><br>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>arrays</h2>
-            <h3 class="custom-red fragment">Lots of values in one parent variable</h3>
-            <h2 class="custom-blue fragment">$array[key] = value;</h2>
-          </section>
-          <section>
-            <h2>Numerically Indexed Array</h2>
-            <pre><code>&lt;?php
-  $employee[0] = "Bob";
-  $employee[1] = "Sally";
-  $employee[2] = "Charlie";
-  $employee[3] = "Clare";
+    $a = 'hello';
+    $b = 'world';
+    $c = $a . $b;
+    
+    // prints helloworld to screen
+    echo $c;
+    
+    // prints 12 to screen
+    echo 1 . 2;
 ?></code></pre>
           </section>
           <section>
-            <h2>Associative Array</h2>
+            <h2 class="custom-gray">Concatenating Assignment Operator<br><span class="custom-red">.=</span></h2>
             <pre><code>&lt;?php
-  $salaries["Bob"] = 2000;
-  $salaries["Sally"] = 4000;
-  $salaries["Charlie"] = 600;
-  $salaries["Clare"] = 0;
+    $a = 'hello';
+    $a .= ' new recruits';
+    
+    // prints hello new recruits to screen
+    echo $a;
 ?></code></pre>
           </section>
         </section>
+
         <section>
           <section>
-            <h2>loops</h2>
-            <h3 class="custom-red fragment">For, While, Do While, For Each</h3>
+            <h2 class="custom-blue">Loops</h2>
+            <h3 class="custom-red fragment">for, while, do-while &amp; foreach</h3>
           </section>
           <section>
-            <h2 class="custom-red">For Loop</h2>
-            <pre><code>&lt;?php
-  /*
-  for (initialize; conditional statement; update){
-     do this code;
+            <h2 class="custom-blue">for</h2>
+          <pre class="fragment"><code>&lt;?php
+  $factorial = 1;
+  
+  for($i = 1; $i &lt;= 10; $i++) {
+    $factorial = $factorial * $i;
   }
-  */
-?></code></pre>
-            <pre class="fragment"><code>&lt;?php
-  $employee[0] = "Bob";
-  $employee[1] = "Sally";
-  $employee[2] = "Charlie";
-  $employee[3] = "Clare";
-  for ($i=0; $i&lt;4; $i=$i+1) {
-    echo $employee[$i];
-  }
+
+  echo $factorial;
 ?></code></pre>
           </section>
           <section>
-            <h2 class="custom-red">While Loop</h2>
-            <pre><code>&lt;?php
-  /*
-  while (conditional statement is true) {
-    //do this code;
+            <h2 class="custom-blue">while</h2>
+          <pre class="fragment"><code>&lt;?php
+  $factorial = 1;
+  $i = 1;
+  
+  while($i &lt;= 10) {
+    $factorial = $factorial * $i;
+    $i++;  // increment
   }
-  */
-?></code></pre>
-            <pre class="fragment"><code>&lt;?php
-  $employee[0] = "Bob";
-  $employee[1] = "Sally";
-  $employee[2] = "Charlie";
-  $employee[3] = "Clare";
-  $i = 0;
-  while ($i &lt; 4) {
-    echo $employee[$i];
-    $i = $i+1;
-  }
+
+  // prints the value of 10!
+  echo $factorial;
 ?></code></pre>
           </section>
           <section>
-            <h2 class="custom-red">Do While</h2>
-            <pre class="fragment"><code>&lt;?php
-  $employee[0] = "Bob";
-  $employee[1] = "Sally";
-  $employee[2] = "Charlie";
-  $employee[3] = "Clare";
-  $i = 0;
+            <h2 class="custom-blue">do-while</h2>
+          <pre class="fragment"><code>&lt;?php
+  $factorial = 1;
+  $i = 1;
+  
   do {
-    echo $employee[$i];
-    $i = $i+1;
-  } while ($i &lt; 4);
+    $factorial = $factorial * $i;
+    $i++;  // increment
+  } while($i &lt;= 10);
+
+  // prints the value of 10!
+  echo $factorial;
 ?></code></pre>
           </section>
           <section>
-            <h2 class="custom-red">For Each</h2>
-            <pre class="fragment"><code>&lt;?php
-  $salaries["Bob"] = 2000;
-  $salaries["Sally"] = 4000;
-  $salaries["Charlie"] = 600;
-  $salaries["Clare"] = 0;
-  foreach ($salaries as $name => $value) {
-    echo $name.' gets Rs. '.$value;
+            <h2 class="custom-blue">foreach</h2>
+            <pre><code>&lt;?php
+  //$applications = array("Bourbon", "Muzi", "CodeVillage", "Erdos");
+  $applications = ["Bourbon", "Muzi", "CodeVillage", "Erdos"];
+
+  // Muzi is a music player hosted on the intranet.
+  echo $applications[1] . " is a music player hosted on the intranet.";</code></pre>
+          <pre class="fragment"><code>
+  echo "Applications developed by SDSLabs: ";
+
+  foreach($applications as $application) {
+    echo $application;
   }
 ?></code></pre>
           </section>
         </section>
+
         <section>
           <section>
-            <h2>FORMS</h2>
+            <h2 class="custom-blue">Associative Arrays</h2>
+            <p class="fragment">Associates <i class="custom-blue">values</i> to <i class="custom-blue">keys</i></p>
+            <p class="custom-red fragment">$ages["Kandoi"]</p>
+          </section>
+          <section>
+            <h2 class="custom-blue">Example</h2>
+            <pre><code>&lt;?php
+  $ages = array(
+    "Kandoi" => 19,
+    "Ravi" => 20
+  );
+
+  // Ravi is 20 years old
+  echo "Ravi is {$ages['Ravi']} years old.";</code></pre>
+            <div class="fragment">
+              <pre><code>
+  foreach($ages as $name => $age) {
+    echo "{$name} is {$age} years old.";
+  }    
+?></code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Functions</h2>
+            <p class="fragment custom-blue">Blocks of code which are used multiple times</p>
+            <p class="fragment custom-red">eg: pow function computes a <sup><small>b</small></sup></p>
+          </section>
+          <section>
+            <h2>Syntax</h2>
+            <pre><code>&lt;?php
+  function FUNCTION_NAME(arguments) {
+    // code
+  }
+?></code></pre>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <pre><code>&lt;?php
+  function sayHello($name) {
+    echo "Hello {$name}";
+  }
+
+  sayHello("new recruits");
+?></code></pre>
+            <div class="fragment">
+              <pre><code>&lt;?php
+  function sayHello($name) {
+    return "Hello {$name}";
+  }
+
+  echo sayHello("new recruits");
+?></code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Forms</h2>
             <div>
                 <ul>
                     <li class="fragment">Important application of basic PHP.</li>
@@ -413,10 +336,15 @@
   Last: &lt;input type="text" name="Lastname" maxlength="5">
   &lt;input type="submit" value="SUBMIT">
 &lt;/form></code></pre><br>
+            <form class="fragment" style="font-size:20px;">
+              First: <input type="text" name="Firstname" maxlength="3"><br>
+              Last: <input type="text" name="Last_name" maxlength="5"><br>
+              <input type="submit" value="Submit">
+            </form>
             <h3 class="fragment custom-gray">form has 2 important attributes <br></h3>
             <h3 class="fragment"><span class="custom-red">Action</span>: destination of form data <br></h3>
             <h3 class="fragment"><span class="custom-red">Method</span>: method used to send data <br></h3>
-            <h3 class="fragment custom-gray">HTTP request methods: GET & POST</h3>
+            <h3 class="fragment custom-gray">HTTP request methods: GET &amp; POST</h3>
           </section>
           <section>
             <h2>GET</h2>
@@ -502,18 +430,46 @@
 
         <section>
           <section>
-            <h2>MySQL</h2>  
+            <h2>Classes</h2>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <pre><code>&lt;?php
+  class Member {
+    public $name = "Name";
+    public $age = 0;
+
+    function __construct($name, $age) {
+       $this->name = $name;
+       $this->age = $age;
+    }
+
+    public function description() {
+      echo "{$this->name} is a member of SDSLabs.";
+      echo "He is {$this->age} years old.";
+    }
+  }</code></pre>
+            <pre><code>
+  $parag = new Member("Parag Nandi", 19);
+
+  $parag->description();
+?></code></pre>
+            <div class="fragment">
+              <p class="custom-blue">Visibility of functions can be <b>public</b>, <b>protected</b> and <b>private</b>.</p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>MySQL</h2>
             <div>
               <ul>
                 <li class="fragment">An open source relational database system</li>
                 <li class="fragment">Stores data in form of tables</li>
                 <li class="fragment">Use the data stored for functionality of your webpage</li>
-                <li class="fragment">It is included in XAMPP</li>
               </ul>
             </div>
-          </section>
-          <section>
-            <img src="img/7.png" alt="">
           </section>
         </section>
 
@@ -521,7 +477,6 @@
           <h2>Using MySQL in PHP file</h2>
           <ul>
             <li class="fragment">Connect to the database</li>
-            <li class="fragment">Select a databasae</li>
             <li class="fragment">Select any data from any table or insert into any table</li>
             <li class="fragment">Close the connection</li>
           </ul>
@@ -530,43 +485,25 @@
         <section>
           <section>
             <h2>Connecting to database</h2>
-            <div class="custom-blue large fragment">mysql_connect()</div>
+            <div class="custom-blue large fragment">mysqli class</div>
             <h3 class="fragment custom-gray">Parameters:</h3>
             <ul class="fragment">
               <li>Server</li>
               <li>Username</li>
               <li>Password</li>
+              <li>Database</li>
             </ul>
           </section>
           <section>
             <pre><code>&lt;?php
-    $link=mysql_connect('server','mysql_user','mysql_password');
-    if($link)
-        echo &quot;Connection made!&quot;;
-    else
-        die (&quot;Connection attempt unsuccessful!&quot;);
-?&gt;</code></pre>
-          </section>
-        </section>
-      
-        <section>
-          <section>
-            <h2>Selecting a database</h2>
-            <div class="custom-blue large fragment">mysql_select_db()</div>
-            <h3 class="fragment custom-gray">Parameters:</h3>
-            <ul class="fragment">
-              <li>Database name</li>
-              <li>Link identifier</li>
-            </ul>
-          </section>
-          <section>
-            <pre><code>&lt;?php
-    $link=mysql_connect('server','mysql_user','mysql_password');
-    if($link)
-        echo &quot;Connection made!&quot;;
-    else
-        die (&quot;Connection attempt unsuccessful!&quot;);
-    $db_selected=mysql_select_db('test', $link);
+    // connecting to database
+    $link = new mysqli('server', 'user', 'password', 'database');
+    
+    if($link->connect_errno) {
+      die (&quot;Connection attempt unsuccessful!&quot;);
+    } else {
+      echo &quot;Connection made!&quot;;
+    }
 ?&gt;</code></pre>
           </section>
         </section>
@@ -574,25 +511,25 @@
         <section>
           <section>
             <h2>Retrieving data from database</h2>
-            <div class="custom-blue large fragment">mysql_query()</div>
-            <h3 class="fragment custom-gray">Parameters:</h3>
+            <div class="custom-blue large fragment">query() method</div>
+            <h3 class="fragment custom-gray">Parameter:</h3>
             <ul class="fragment">
               <li>Query</li>
-              <li>Link identifier</li>
             </ul>
           </section>
           <section>
             <pre><code>&lt;?php
-    $link=mysql_connect('server','mysql_user','mysql_password');
-    if($link)
-        echo &quot;Connection made!&quot;;
-    else
-        die (&quot;Connection attempt unsuccessful!&quot;);
-    $db_selected=mysql_select_db('test', $link);
-    if ($db_selected)
-        $users=mysql_query(&quot;SELECT * FROM users&quot;, $link);
-    else
-        echo "Could not select database";
+    $link = mysql_connect('server', 'user', 'password', 'database');
+
+    if($link->connect_errno) {
+      die (&quot;Connection attempt unsuccessful!&quot;);
+    } else {
+      echo &quot;Connection made!&quot;;
+    }
+    
+    $result = $link->query(&quot;SELECT * FROM users&quot;);
+
+    // do some processing on $result
 ?&gt;</code></pre>
           </section>
         </section>
@@ -600,29 +537,21 @@
         <section>
           <section>
             <h2>Closing database connection</h2>
-            <div class="custom-blue large fragment">mysql_close()</div>
-            <h3 class="fragment custom-gray">Parameters:</h3>
-            <ul class="fragment">
-              <li>Link identifier</li>
-            </ul>
+            <div class="custom-blue large fragment">close() method</div>
           </section>
           <section>
             <pre><code>&lt;?php
-    $link=mysql_connect('server','mysql_user','mysql_password');
-    if($link)
-        echo &quot;Connection made!&quot;;
-    else
-        die (&quot;Connection attempt unsuccessful!&quot;);
-    $db_selected=mysql_select_db('test', $link);
-    if ($db_selected)
-        $users=mysql_query(&quot;SELECT * FROM users&quot;, $link);
-    else
-        echo "Could not select database";
-    $close_connection=mysql_close($link);
-    if ($close_connection)
-        echo "Good job!";
-    else
-        echo "Something is wrong!";
+    $link = mysql_connect('server', 'user', 'password', 'database');
+
+    if($link->connect_errno) {
+      die (&quot;Connection attempt unsuccessful!&quot;);
+    } else {
+      echo &quot;Connection made!&quot;;
+    }
+    
+    $result = $link->query(&quot;SELECT * FROM users&quot;);
+
+    $link->close();
 ?&gt;</code></pre>
           </section>
         </section>
@@ -631,8 +560,7 @@
           <h2>links</h2>
           <h3><a href="http://www.php.net/manual/en/">php documentation</a></h3>
           <h3><a href="http://www.tizag.com/phpT/">Tizag - PHP</a></h3>
-          <h3><a href="http://www.tizag.com/mysqlTutorial/">Tizag - MySQL</a></h3>
-          <h3><a href="http://db.tt/IUc0r6q">Dropbox</a></h3>
+          <h3><a href="http://www.php.net/manual/en/class.mysqli.php">mysqli class</a></h3>
         </section>
 
       </div>
