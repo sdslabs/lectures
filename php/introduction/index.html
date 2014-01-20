@@ -522,7 +522,7 @@
           </section>
           <section>
             <pre><code>&lt;?php
-    $link = mysql_connect('server', 'user', 'password', 'database');
+    $link = new mysqli('server', 'user', 'password', 'database');
 
     if($link->connect_errno) {
       die (&quot;Connection attempt unsuccessful!&quot;);
@@ -544,7 +544,7 @@
           </section>
           <section>
             <pre><code>&lt;?php
-    $link = mysql_connect('server', 'user', 'password', 'database');
+    $link = new mysqli('server', 'user', 'password', 'database');
 
     if($link->connect_errno) {
       die (&quot;Connection attempt unsuccessful!&quot;);
