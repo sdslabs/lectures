@@ -12,149 +12,145 @@
             <div class="slides">
                 <section>
                     <section>
-                        <h1>Javascript</h1>
+                        <h1>Javascript Lecture</h1>
                         <h3>SDSLabs</h3>
-                        <p>
-                            <i><small><a href="mailto:dvjbndlsh93@gmail.com">dvjbndlsh93@gmail.com</a></small></i><br>
-                            <i><small><a href="mailto:abhikandoi2000@gmail.com">abhikandoi2000@gmail.com</a></small></i>
-                        </p>
                     </section>
                     <section>
-                        <div>Use our fb group whenever you have any doubt and we promise a quick reply</div>
-                        <div><a>https://www.facebook.com/groups/SDSWebDev</a></div>
+                        <h2>As always, ask questions</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>What is javascript used for?</h2>
+                        <p>Your applications's front end</p>
+                        <ul>
+                            <li>Dynamically load content from the server without interfering the current page</li>
+                            <li>Manipulate HTML elements in a document</li>
+                            <li>Play music and videos on the web page</li>
+                            <li>Awesome animations</li>
+                            <li>Make simple games for the web</li>
+                        </ul>
                     </section>
                     <section>
-                        <h2>Why learn javascript?</h2>
-                        <p>
-                            <i class="fragment">Every single website uses javascript for some cool UI effects</i><br>
-                            <i class="fragment">You can control audio and video on the web using javascript</i><br>
-                            <i class="fragment">Almost anything that moves within a website is done using javascript</i>
-                            <i class="fragment">Because javascript can do this:</i>
-                        </p>
-                        <img class="fragment" src="img/game.jpg" style="position:relative;left:0px;top:0px;" id="game">
-                        <script>
-                            $(document).on('keydown', function (e) {
-                                var key = e.which;
-                                console.log(key);
-                                if (key == 81) {
-                                    $('#game').animate({
-                                        left: "+=50"
-                                    }, 100);
-                                }
-                                else if (key == 82) {
-                                    $('#game').animate({
-                                        left: "-=50"
-                                    }, 100);
-                                }
-                                else if (key == 87) {
-                                    $('#game').animate({
-                                        top: "-=50"
-                                    }, 100);
-                                }
-                                else if (key == 69) {
-                                    $('#game').animate({
-                                        top: "+=50"
-                                    }, 100);
-                                }
-                            });
-                        </script>
+                        <h3>Even this presentation is based upon javascript</h4>
                     </section>
                 </section>
                 <section>
                     <section>
                         <h2>Using javascript in your html page</h2>
                         <p>The &lt;script&gt; tag</p>
-                        <p class="fragment">There are two options</p>
                     </section>
                     <section>
-                        <div>Option 1</div>
+                        <p>Option 1 - Internal</p>
 <pre><code>&lt;script&gt;
   var x = 10;
   // Some really cool and badass code
 &lt;/script&gt;</code></pre>
                         <div><br></div>
-                        <div>Option 2 - src attribute</div>
+                        <p>Option 2 - External</p>
                         <pre><code>&lt;script src=&quot;filename.js&quot;&gt;&lt;/script&gt;</code></pre>
-                    </section>                    
+                    </section>
                 </section>
                 <section>
                     <section>
                         <h2>Javascript Basics</h2>
-                        <p>How is it different from cpp?</p>
-                        <p class="fragment">It is much easier to understand and write</p>
+                        <p>How is it different from c++ or java?</p>
+                        <p>For starters, it is much easier to understand and write</p>
                     </section>
                     <section>
                         <h3>Variables</h3>
                         <p>Variables do not have any type</p>
-<pre class="fragment"><code>var num = 10;
+<pre><code>var num = 10;
 var pi = 3.1415;
 var str = 'A string';
-var arr = ['All', 'Hail', 'var', '!'];
-var func = function (a, b) {
+var arr = ['This', 'is', 'an', 'array'];
+var sum = function (a, b) {
   return a + b;
 };</code></pre>
-                        <p class="fragment">Even functions are defined this way!</p>
+                    </section>
+                    <section>
+                        <h3>Print Statement and Debugging</h3>
+                        <p>Chrome console is your best friend</p>
+<pre><code>var x = '';
+
+// Some really cool code goes here
+// This code fetches a list of songs
+// from muzi and stores them in a
+// javascript object
+
+console.log(x);</code></pre>
                     </section>
                 </section>
                 <section>
                     <section>
-                        <h2>Document Object Model (DOM)</h2>
-                        <p>The DOM defines a standard way for accessing and manipulating HTML documents.</p>
-                        <p class="fragment">Using layout engines, a web browser converts HTML to DOM.</p>
-                        <p class="fragment">This DOM provides methods to manipulate the data.</p>       
+                        <h2>Manipulating HTML Elements</h2>
+                        <p>Javascript can access HTML Elements and manipulate them for really cool results</p>
                     </section>
                     <section>
-                        <h2>DOM Nodes</h2>
-                        <img class="fragment" src="img/htmltree.jpg">
-                        <p class="fragment">Everything in an html document is represented as a node. These nodes share a basic hierarchical relationship.</p>
-                        <!-- Explain parent, child and sibling here -->
+                        <h3>An example using vanilla javascript</h3>
+<pre><code>document.getElementById('clickable').onclick = function () {
+  document.getElementsByClassName('chng')[0].innerHTML = 'This is hard :(';
+  document.getElementsByTagName('span')[0].style.color = '#fff';
+};</code></pre>
+                        <p id="clickable" style="color: #35C0CD; cursor: pointer;">Click Me</p>
+                        <p><span class="chng" style="color: #35C0CD;">(\__/)</span></p>
+                        <script>
+                            document.getElementById('clickable').onclick = function () {
+                                document.getElementsByClassName('chng')[0].innerHTML = 'This is hard :(';
+                                document.getElementsByClassName('chng')[0].style.color = '#fff';
+                            }
+                        </script>
                     </section>
-                </section>
-                <section>
                     <section>
-                        <h2>Manipulating the DOM</h2>
-                        <!-- Say this is where js comes in and allows you to manipulate this DOM -->
-                        <p>Javascript provides access to DOM and allows to manipulate it. This includes stuff like:</p>
-<pre class="fragment"><code>document.getElementById('special').onclick = someCoolFunction();
-document.getElementsByClass('damn')[0].innerHTML = 'This is way too much!';
-document.getElementsByTagName('why')[0].css = "I'm out of here!";
-</code></pre>
-                        <img class="fragment" src="img/jsmother.jpg">
+                        <h3>The Flow</h3>
+                        <p>The main process for content manipulation</p>
+                        <ul>
+                            <li>Use css selectors to specify an html element</li>
+                            <li>This javascript object has various properties and functions associated with it</li>
+                            <li>Add various event listeners</li>
+                            <li>Specify a function that is called whenever an event is triggered</li>
+                            <li>Modify the properties of such javascript objects to change their appearence</li>
+                        </ul>
                     </section>
                 </section>
                 <section>
                     <section>
                         <h2>Introducing jQuery</h2>
-                        <p>A Javascript library that makes everyone's lives a lot easier</p>
-                        <o>It has predefined methods for much simpler DOM traversal and manipulation</p>
-                        <pre class="fragment"><code>&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;</code></pre>
-                        <p class="fragment">Include this in the head element and you're all set to write some awesome javascript</p>
+                        <p>An open source Javascript library</p><br>
                     </section>
                     <section>
-                        <h2>$ - jQuery function</h2>
-<pre><code>$('#special').on('click', function () {
-  $('#mydiv').append( 'Hello World!' );
-});</code></pre><br>
-                        <p class="fragment">The Flow:</p>
+                        <h3>Using jQuery</h3>
+                        <pre><code>&lt;script src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;</code></pre>
+                        <p>Include this in the head tag of your html page</p>
+                    </section>
+                    <section>
+                        <h3>$ - jQuery function</h3>
+<pre><code>$('#clickable').on('click', function () {
+  $('.chng').html( 'This is better :)' );
+  $('span').css('color', '#fff');
+});</code></pre>
+                        <p id="clickable2" style="color: #35C0CD; cursor: pointer;">Click Me</p>
+                        <p><span class="chng2" style="color: #35C0CD;">(\__/)</span></p>
+                        <script>
+                            $('#clickable2').on('click', function () {
+                                $('.chng2').html( 'This is better!' );
+                                $('.chng2').css('color', '#fff');
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3>The Flow</h3>
+                        <p>The main process remains the same</p>
                         <ul>
-                            <li class="fragment">You pass a css selector to the &quot;$&quot; function</li>
-                            <li class="fragment">This returns a DOM object which has various methods and events</li>
-                            <li class="fragment">We add event listeners for various possible events for the DOM</li>
-                            <li class="fragment">These event listeners call functions (known as callbacks) whenever these events are triggered</li>
+                            <li>You pass a css selector to the &quot;$&quot; function</li>
+                            <li>This returns an HTML element which has various properties and functions</li>
+                            <li>Add event listeners</li>
+                            <li>Specify callback functions</li>
+                            <li>Modify the properties of the elements</li>
                         </ul>
                     </section>
-                    <section>
-                        <h2>Events in javascript</h2>
-                        <p>
-                            DOM Events represent any way in which the user may interact with the DOM. It may be a<br>
-                            <i class="fragment">Click</i><br>
-                            <i class="fragment">Double Click</i><br>
-                            <i class="fragment">Scroll</i><br>
-                            <i class="fragment">Keyboard keypress</i><br>
-                        </p>
-                    </section>
                 </section>
-                <section>
+<!--                 <section>
                     <section>
                         <h2>Now hold up!</h2>
                         <pre class="fragment"><code>$('#special').on('click', function () {
@@ -185,20 +181,20 @@ sum(10, 20, function (s) {
   $('#mydiv').append( 'Hello World!' );
 });</code></pre>
                     </section>
-                </section>
+                </section> -->
                 <section>
                     <section>
                         <h2>Some more examples</h2>
                     </section>
                     <section>
                         <h3>A Click Counter</h3>
-<pre class="fragment"><code>var click = 0;
+<pre><code>var click = 0;
 $('#counter').on('click', function () {
   click = click + 1;
   $('#count').html(click);
-});</pre></code><br>
-                        <div id='counter' class='fragment'><a>Click Me</a></div>
-                        <div class='fragment'><span id='count'>0</span> Clicks</div>
+});</pre></code>
+                        <p id='counter' style="cursor: pointer; color: #35C0CD;">Click Me</p>
+                        <p><span id='count'>0</span> Clicks</p>
                         <script>
                             var click = 0;
                             $('#counter').on('click', function () {
@@ -210,24 +206,47 @@ $('#counter').on('click', function () {
                     <section>
                         <h3>Fadeout and Fadein</h3>
                         <p>This is going to be legen...</p>
-                        <p id="fade"><a>Wait for it!</a></p>
+                        <p id="fade" style="cursor: pointer; color: #35C0CD;">Wait for it!</p>
                         <p id="hidden" class="hidden">..dary, legendary.</p>
-                        <pre class="fragment"><code>$('#fade').click(function () {
+<pre><code>$('#fade').on('click', function () {
   $('#fade').fadeOut('slow');
-  $('#dary').fadeIn('slow');
+  $('.hidden').fadeIn('slow');
 });</code></pre>
                         <script>
                             $('.hidden').hide();
                             $('#fade').click(function () {
                                 $('#fade').fadeOut('slow');
-                                $('#hidden').fadeIn('slow');
+                                $('.hidden').fadeIn('slow');
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3>A Simple clock</h3>
+                        <p><span id="date"></span></p>
+<pre><code>var interval = setInterval(function () {
+  var date = new Date();
+  var time = date.toTimeString();
+  $('#date').html(time);
+}, 1000);
+
+$('#stop').on('click', function () {
+    clearInterval(interval);
+});</code></pre>
+                        <p><span id="stop" style="cursor: pointer; color: #35C0CD;">Stop</span></p>
+                        <script>
+                            var interval = setInterval(function () {
+                                var date = new Date();
+                                $('#date').html(date.toTimeString().split(' ')[0]);
+                            }, 1000);
+                            $('#stop').on('click', function () {
+                                clearInterval(interval);
                             });
                         </script>
                     </section>
                     <section>
                         <h3>Super Mario on JS Steroids</h3>
-<pre class="fragment"><code>$(document).on(&quot;keydown&quot;, function (e) {
-  var key = e.which;
+<pre><code>$(document).on(&quot;keypress&quot;, function (event) {
+  var key = event.which;
   if (key == 81) {
     $('#game').animate({
       left: "+=50"
@@ -279,6 +298,21 @@ $('#counter').on('click', function () {
                 </section>
                 <section>
                     <section>
+                        <h2>How is all this happening?</h2>
+                        <p>The same script would not work on your terminal</p>
+                    </section>
+                    <section>
+                        <h3>Document Object Model (DOM)</h3>
+                        <p>Treat everything in the HTML document as an object</p>
+                        <ul>
+                            <li>All web browsers use a layout engine to convert the html document into html elements</li>
+                            <li>It adds various properties and functions for each element to manipulate the style, the data and to add events</li>
+                            <li>The browser then allows javascript to access these elements and use them as objects</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
                         <h2>
                             A Practical use for Form Validation
                         </h2>
@@ -294,7 +328,7 @@ $('#counter').on('click', function () {
                     </section>
                     <section>
                         <h3> The Code </h3>
-<pre><code>$('#registration').on('submit', function () {
+<pre><code>$('#registration').on('submit', function (event) {
   // Get all the details from the form
   var name = $('#name').val();
   var email = $('#email').val();
@@ -304,19 +338,18 @@ $('#counter').on('click', function () {
   // Check for full name
   if (name.indexOf(' ') == -1) {
     alert('Please enter full name!');
-    return false;
+    event.preventDefault();
   }
   // Check whether both passwords match
   else if (pass != cpass) {
     alert('Both passwords do not match!');
-    return false;
+    event.preventDefault();
   }
 });</pre></code>
                     </section>
                 </section>
                 <section>
-                    <h2>Any Questions?</h2>
-                    <p>Go on, We won't bite</p>
+                    <h2>Clarify any doubts that you may have</h2>
                 </section>
             </div>
         </div>
