@@ -79,6 +79,28 @@ var sum = function (a, b) {
 // javascript object
 
 console.log(x);</code></pre>
+                        <img src="img/console_fail.jpg">
+                        <img src="img/console_success.jpg"/>
+                    </section>
+                    <section>
+                        <h3>Objects in Javascript</h3>
+                        <p>It is very easy to define and access objects in javascript</p>
+<pre><code>var muzi = {
+  currentTrack: 'Hey jude!',
+  currentPlaylist: 'Likes',
+  view: {
+    name: 'playlist',
+    render: function () {
+      // Code to render the playlist view
+      // It displays all the tracks in the
+      // selected playlist
+    }
+  }
+};
+
+console.log(muzi.currentTrack);
+muzi.view.name = 'tracks';
+muzi.view.render();</code></pre>
                     </section>
                 </section>
                 <section>
@@ -126,7 +148,7 @@ console.log(x);</code></pre>
                     <section>
                         <h3>$ - jQuery function</h3>
 <pre><code>$('#clickable').on('click', function () {
-  $('.chng').html( 'This is better :)' );
+  $('.chng').html( 'This is better!' );
   $('span').css('color', '#fff');
 });</code></pre>
                         <p id="clickable2" style="color: #35C0CD; cursor: pointer;">Click Me</p>
@@ -152,34 +174,27 @@ console.log(x);</code></pre>
                 </section>
 <!--                 <section>
                     <section>
-                        <h2>Now hold up!</h2>
-                        <pre class="fragment"><code>$('#special').on('click', function () {
-  $('#mydiv').append( 'Hello World!' );
-});</code></pre>
-                        <img class="fragment" src="img/inception.jpg">
-                        <p class="fragment">What does that even mean?</p>
+                        <h2>Synchronous and Asynchronous</h2>
+                        <p>The theoretical part behind callbacks and event listeneres</p>
                     </section>
                     <section>
-                        <h2>Callbacks</h2>
-                        <p>This is best illustrated with an example</p>
-<pre class="fragment"><code>var sum = function (a, b) {
-  return a + b;
-};
-var s = sum(10, 20);
-$('#sum').append(s);</code></pre>
-<pre class="fragment"><code>var sum = function (a, b, callback) {
-  callback(a + b);
-};
-sum(10, 20, function (s) {
-  $('#sum').append(s);
-);</code></pre>
-                        <p class="fragment">So callbacks are associated with asynchronous programming</p>
+                        <h3>Synchronous Programming</h3>
+                        <p>A synchronous script executes all commands in order</p>
+<pre><code>var x = '';
+
+// You make a request to the server for some data
+// The script waits till the request is completed
+// Once the request is completed, the following
+// code is executed</code></pre>
                     </section>
                     <section>
-                        <p>In the previous example:</p>
-                        <pre><code>$('#special').on('click', function () {
-  $('#mydiv').append( 'Hello World!' );
-});</code></pre>
+                        <h3>Asynchronous Programming</h3>
+                        <p>Such a script starts the process, and while waiting for it to complete executes the remaining script</p>
+<pre><code>// Once the request is made, the following code
+// is executed while the script waits for the
+// request to be completed. Once the request is
+// completed the callback function associated with
+// it is executed</code></pre>
                     </section>
                 </section> -->
                 <section>
@@ -205,9 +220,8 @@ $('#counter').on('click', function () {
                     </section>
                     <section>
                         <h3>Fadeout and Fadein</h3>
-                        <p>This is going to be legen...</p>
-                        <p id="fade" style="cursor: pointer; color: #35C0CD;">Wait for it!</p>
-                        <p id="hidden" class="hidden">..dary, legendary.</p>
+                        <p id="fade" style="cursor: pointer; color: #35C0CD;">This is going to disappear!</p>
+                        <p id="hidden" class="hidden">Hello there!</p>
 <pre><code>$('#fade').on('click', function () {
   $('#fade').fadeOut('slow');
   $('.hidden').fadeIn('slow');
@@ -309,6 +323,31 @@ $('#stop').on('click', function () {
                             <li>It adds various properties and functions for each element to manipulate the style, the data and to add events</li>
                             <li>The browser then allows javascript to access these elements and use them as objects</li>
                         </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>AJAX</h2><h3>(Asynchronous Javascript and XML)</h3>
+                        <p>It is used to fetch content from the server without affecting the display of the current web page</p>
+                    </section>
+                    <section>
+                        <h3>Basic Syntax</h3>
+                        <p>Passing an object into the function</p>
+<pre><code>$.ajax({
+  url: '/muzi',
+  type: 'GET',
+  dataType: 'json',
+  success: function (data) {
+    console.log(data);
+  },
+  error: function (xhr) {
+    console.log(xhr);
+  }
+})</code></pre>
+                    </section>
+                    <section>
+                        <h3>What does asynchronous mean?</h3>
+                        <p>It basically means that the script is free to execute other commands while the result is being loaded</p>
                     </section>
                 </section>
                 <section>
