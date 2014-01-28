@@ -29,10 +29,6 @@
     <section>
         <section>
             <h1>css</h1>
-            <p>
-                <br/><br/>Ankita Shukla <br/><br/>
-                Deepali Jain 
-            </p>
         </section>
         <section>
             <h2>
@@ -46,7 +42,7 @@
             <a href="https://www.facebook.com/groups/SDSWebDev/">https://www.facebook.com/groups/SDSWebDev/</a>
         </section>
     </section>
-    <section>
+    <!-- <section>
         <section>
             <h2>FIRST QUESTION first</h2>
             <div>
@@ -89,8 +85,8 @@
                     <div>users, viewers, customers, consumers<i>&nbsp;</i>
                 </div>
             </section>
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
             <section>
                 <h2>Google over the years</h2>
 <div>
@@ -155,6 +151,7 @@
             <section>
                 <h2>Basic syntax</h2>
 <div>SELECTOR { PROPERTY: VALUE; }<br>
+Attribute selector: [ATTRIBUTE] { PROPERTY: VALUE; }<br>
 </div>
 <div>
     <br>
@@ -166,6 +163,7 @@
 <div>p { margin-top: 10px; }</div>
                 <div>h1 { font-size: 14px; }</div>
                 <div>form { border: 1px solid blue; }</div>
+                <div>[input] { color: #bbbbbb; }</div>
 </section>
                 <section>
                     <h2>COMMENTS</h2>
@@ -177,21 +175,6 @@
                 <section>
                     <h2>Chrome inspect</h2>
                     <div>is your best friend</div>
-                    <div>
-                        <br>
-                    </div>
-                    <div>Umm.... firefox user?</div>
-                </section>
-                <section>
-                    <img src="3.jpg" style="">
-<div>Chrome is way better</div>
-                    <div>
-                        <i>in my humble opinion</i>
-                    </div>
-                    <div>
-                        <i>BUT</i>
-                    </div>
-                    <div>Use whatever you are comfortable with</div>
                 </section>
             </section>
             <section>
@@ -529,9 +512,9 @@
                             <li>Divide your html into section</li>
                             <li>Style sections as per need</li>
                             <li>Sections are more or less independent</li>
-                            <li>
+                           <!--  <li>
                                 <b>Life = way easier</b>
-                            </li>
+                            </li> -->
                         </ol>
                     </div>
                 </section>
@@ -642,11 +625,11 @@
                 <section>
                     <h2>BUT I WANT to move this tag out of the flow?!</h2>
                     <div>OPTIONS:</div>
-                    <div>Float the damn thing</div>
+                    <div>Float it</div>
                     <div>or</div>
                     <div>Absolutely position it</div>
-                    <div>or</div>
-                    <div>JUST FLOAT THE DAMN THING!</div>
+                    <!-- <div>or</div>
+                    <div>JUST FLOAT THE DAMN THING!</div> -->
                     <div>
                         <br>
                     </div>
@@ -697,9 +680,67 @@
         </section>
     </section>
     <section>
+        <section>
+            <h2>Pseudo Classes</h2>
+        </section>
+        <section>
+            <div>
+                selector:pseudo-class {property:value;}
+            </div>
+        </section>
+        <section>
+            <div>
+                a:link {color:#FF0000;}      /* unvisited link */<br>
+                a:visited {color:#00FF00;}   /* visited link */<br>
+                a:hover {color:#FF00FF;}     /* mouse over link */<br>
+                a:active {color:#0000FF;}    /* selected link */<br>
+            </div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <h2>Browser inconsistencies</h2>
+        </section>
+        <section>
+            <div>
+                Internet Explorer's handling of css sucks,<br/>
+                But some people do use it!<br/><br/>
+                So, now what?<br/><br/>
+                <div style="font-size:22px">1.) Let those IE lovers pay their price by dealing with ugly webpages. Or<br/>
+                2.) Be good and fix the css for them.</div>
+            </div>
+        </section>
+        <section>
+            Conditional comments:<br/><br/>
+            &lt !--[if IE]><br>
+              &lt link rel="stylesheet" type="text/css" href="ie_fixes.css" / &gt <br>
+            &lt ![endif]-- &gt<br>
+        </section>
+        <section>
+            Prefixes:<br/><br/>
+            <ul>
+                <li>-webkit-</li>
+                <li>-o-</li>
+                <li>-moz-</li>
+            </ul>
+        </section>
+        <section>
+            Examples:<br/><br/>
+            <ul>
+                <li>-webkit-transition: width 2s; /*Safari*/</li>
+                <li>-moz-column-count:3; /* Firefox */</li>
+            </ul>
+        </section>
+        <section>
+            css reset<br><br>
+            Removes default browser styles.<br/><br/>
+            <a href="http://meyerweb.com/eric/tools/css/reset/">http://meyerweb.com/eric/tools/css/reset/</a><br>
+        </section>
+    </section>
+    <!-- <section>
         <h2>QUESTION?</h2>
         <div>EVEN BATMAN ASKED QUESTIONS</div>
-    </section>
+    </section> -->
 </div>
 
         </div>

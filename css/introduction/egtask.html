@@ -6,14 +6,21 @@
 <body>
     <div class="container">
         <div class="overlay">
-            <h1>This is a heading of 1st kind!</h1>
-            <h3>This is a heading of 3rd kind!</h3>
-            <p>
-                This is one ugly paragraph. To learn how to style it, attend the CSS lecture.
-            </p>    
+            <div>
+                <h1>This is a heading of 1st kind!</h1>
+                <h3>Heading of 3rd kind!</h3>
+            </div>
+            <div>
+                <p class = "col1">
+                    This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.
+                </p>
+                <p class = "col2">
+                    This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.This paragraph has two columns.
+                </p>
+            </div>
 
             <p>
-                <a href="http://google.com" target="_blank">This link will open in a new tab</a>
+                <a href="http://google.com" target="_blank" class = "link">This link will open in a new tab</a>
             </p>
 
             <p>
@@ -38,7 +45,7 @@
                 </ol>    
             </p>
 
-            <table border="1">
+            <table border="1" class="table">
                 <tr>
                     <td><b>Column 1</b></td>
                     <td><b>Column 2</b></td>
@@ -66,7 +73,7 @@
                     <div id="last">
                     Last: <input title="Please Enter Your Last Name" name="last" type="text" size="18" maxlength="5" value="12345" /><br />
                     </div>
-                    <div class="submit">
+                    <div class="submit float">
                     <input type="submit" value="SUBMIT" />
                     </div>
                 </form>
