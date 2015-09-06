@@ -1,0 +1,85 @@
+html,body{
+	margin: 0px;
+	height: 100%;
+}
+
+.side_view{
+	position: fixed;
+	height: 100%;
+	width: 25%;
+	background-color: #E5E5E5;
+}
+
+.title_writer{
+    
+    text-align: center;
+    height: 25%;
+    background-color: grey;
+
+}
+.main_view{
+	height: 100%;
+    width:75%;
+    float: right;
+}
+h1{
+    font-size: 40px;
+    margin-top: 0px;
+}
+h3{
+	font-size: 20px;
+}
+
+#sdslabs_main_pic{
+	height: 25%;
+	width: 100%;
+}
+
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+
+.individual_links{
+	
+	width: 100%;
+	vertical-align: middle;
+	height: 18%;
+	font-size: 30px;
+	text-align: center;
+}
+.author{
+	margin-left: 200px;
+	font-size: 20px;
+}
+.blog{
+	padding: 30px;
+	text-align: center;
+}
+.heading{
+	text-align: center;
+	font-size: 25px;
+}
+.content{
+	text-align: left;
+	margin-top: 30px;
+	font-size: 20px;
+}
+footer{
+	position: absolute;
+	bottom: 0;
+}

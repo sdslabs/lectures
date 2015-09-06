@@ -6,6 +6,7 @@ html,body{
 	position: fixed;
 	height: 100%;
 	width: 25%;
+	background-color: #35ACD4;
 	
 }
 #sdslabs_main_pics{
@@ -15,11 +16,12 @@ html,body{
 .title_writer{
 	height: 25%;
 	width:75%;
-	
 	text-align: center;
+
 	float: right;
 }
-h1{
+h1{ 
+	color: #052252;
 	font-size: 50px;
 }
 div.post{

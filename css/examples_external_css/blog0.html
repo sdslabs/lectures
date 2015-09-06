@@ -4,29 +4,57 @@
 		<meta charset="utf-8">
 		<title>SDSLabs Example Blog</title>
 		<meta name="author" content="Palai">
-		<meta name="description" content="HTML example">
+
+		<meta name="description" content="CSS example">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<header>
-			<img src="sdslabs.png" alt="SDSLabs logo" />
-			<h1>The Writer's World Welcomes You.</h1>
-			<p>Lorem Ipsum Dolor Amet</p>
-		</header>
-		<div>
-			<h3>Recent Blogs</h3>
-			<ul>
-			<li><a href="blog0.html">Blog 0</a></li>
-			<li><a href="blog1.html">Blog 1</a></li>
-			<li><a href="blog2.html">Blog 2</a></li>
-			<li><a href="blog3.html">Blog 3</a></li>
-			</ul>
-		</div>	
-		<div>	
-			<h2>Blog0: Suspendisse mollis ligula a aliquet</h2>
-			<span>Author: Aashaka</span>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia ex cursus purus euismod vehicula. Sed risus magna, faucibus sit amet gravida ut, cursus ut nisl. Vivamus at turpis ac purus aliquet auctor sed id ligula. Integer convallis orci in urna facilisis aliquam. Curabitur malesuada ex sit amet lorem rutrum sagittis.</p>
-			<p>Proin volutpat, odio ut ultrices sagittis, elit massa posuere elit, in feugiat diam dolor in sem. Vivamus consectetur risus vitae orci scelerisque, vel suscipit quam lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ac arcu ullamcorper, malesuada lectus in, interdum enim.</p>
+		
+		<div class="side_view">
+			
+			<img src="sdslabs.png" id="sdslabs_main_pic">
+
+				<br />
+				<br />
+				<br />
+				<div class="individual_links">
+					<a href="blog0.html">Blog 0</a>
+				</div>
+				<div class="individual_links">
+					<a href="blog1.html">Blog 1</a>
+				</div>
+				<div class="individual_links">
+					<a href="blog2.html">Blog 2</a>
+				</div>
+				<div class="individual_links">
+					<a href="blog3.html">Blog 3</a>
+				</div>
+				<footer>&copy; SDSLabs 2015</footer>
 		</div>
-		<footer>&copy; SDSLabs 2015</footer>
+		<div class="main_view">
+
+			<div class="title_writer">
+				<br />
+				<br />
+				
+				<h1>The Writer's World Welcomes You.</h1>
+				<h3>Lorem Ipsum Dolor Amet</h3>
+			</div>	
+
+			<div class="blog">
+				<div class="heading">
+					<h2>Suspendisse mollis ligula a aliquet</h2>
+				</div>
+				<div class="author">
+					-Aashaka
+				</div>
+				<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia ex cursus purus euismod vehicula. Sed risus magna, faucibus sit amet gravida ut, cursus ut nisl. Vivamus at turpis ac purus aliquet auctor sed id ligula. Integer convallis orci in urna facilisis aliquam. Curabitur malesuada ex sit amet lorem rutrum sagittis.</p>
+			<p>Proin volutpat, odio ut ultrices sagittis, elit massa posuere elit, in feugiat diam dolor in sem. Vivamus consectetur risus vitae orci scelerisque, vel suscipit quam lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ac arcu ullamcorper, malesuada lectus in, interdum enim.</p>	
+				</div>
+			</div>
+		</div>
+		
+
 	</body>
 </html>
