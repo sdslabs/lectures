@@ -1,0 +1,44 @@
+html,body{
+	margin: 0px;
+	height: 100%;
+}
+.side_view {
+	position: fixed;
+	height: 100%;
+	width: 25%;
+	
+}
+#sdslabs_main_pics{
+	width: 100%;
+	height: 25%;
+}
+.title_writer{
+	height: 25%;
+	width:75%;
+	
+	text-align: center;
+	float: right;
+}
+h1{
+	font-size: 50px;
+}
+div.post{
+	padding: 50px;
+  	font-family: "Century Schoolbook L" , Arial;
+  	font-size: 40px;
+	text-align: center;
+	
+}
+.details{
+	height: 35px;
+	width: 400px;
+}
+.detail{
+	margin-top: 20px;
+	height: 100px;
+	width: 400px;
+}
+footer{
+	position: absolute;
+	bottom: 0;		
+}
