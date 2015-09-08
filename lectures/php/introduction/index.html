@@ -1,0 +1,596 @@
+<!doctype html>  
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>PHP</title>
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="../../components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../components/reveal.js/css/theme/beige.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/sdslabs.css">
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <section>
+            <h1>php</h1>
+            <h3>SDSLabs</h3>
+          </section>
+          <section>
+            <h2 class="custom-red">What does it stand for?</h2>
+            <h2 class="fragment custom-gray">PHP: HYPERTEXT PREPROCESSOR</h2>
+          </section>
+          <section>
+            <h2 class="custom-red">What is it?</h2>
+            <h3 class="fragment">PHP IS AN HTML-EMBEDDED <br /><span class="custom-blue">SCRIPTING LANGUAGE</span>.</h3>
+            <h4 class="fragment custom-gray">INTERPRETED RATHER THAN COMPILED.</h4>
+          </section>
+          <section>
+            <h2 class="custom-red">Why use it?</h2>
+            <h3 class="fragment">WRITE <span class="custom-blue">DYNAMICALLY GENERATED PAGES</span> QUICKLY.</h3>
+            <h4 class="fragment custom-gray">GENERATED AT THE TIME OF ACCESS BY A USER OR <br />CHANGE AS A RESULT OF INTERACTION WITH THE USER.</h4>
+            <img src="img/client-server-model.png" alt="" class=" fragment plain">
+          </section>
+          <section>
+            <h2 class="custom-red">How does it work?</h2>
+            <h3 class="fragment">PHP IS A <span class="custom-blue">SERVER-SIDE</span> LANGUAGE.</h3>
+            <h4 class="fragment custom-gray">PROCESSING TAKES PLACE ON THE SERVER &amp; HTML IS RETURNED TO THE BROWSER.</h4>
+            <img src="img/server-client.svg" alt="" class=" fragment plain">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Installation</h2>
+            <div class="fragment">
+              <p>Refer to <a href="https://redmine.sdslabs.co.in/projects/resource/wiki/Ubuntu_Packages_to_Install"><span class="custom-blue">Resource Wiki</span></a></p>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Write</h2>
+            <div class="fragment">
+              <p>All PHP code must be contained within <span class="custom-red">&lt;?php</span> and <span class="custom-red">?></span></p>
+            </div>
+            <div class="fragment">
+              <p>Every statement has to be terminated with a <span class="custom-red">semicolon</span>.</p>
+            </div>
+            <pre class="fragment"><code>&lt;?php
+  // code goes here
+?&gt;</code></pre>
+          <div class="fragment">
+            <p>Save the file with <span class="custom-red">php</span> extension.</p>
+          </div>
+          </section>
+          <section>
+            <h2>How to see a php file in action?</h2>
+            <div class="fragment">
+              <p><span class="custom-blue">Demonstration time.</span></p>
+            </div>
+          </section>
+          <section>
+            <h2>What happens if the URL points to a directory?</h2>
+            <div class="fragment">
+              <p>If the URL points to a directory rather than a file, the server will serve a default page <span class="custom-blue">index.php</span> within that directory.</p>
+            </div>
+            <div class="fragment">
+              <small>For eg: By default <span class="custom-blue">http://localhost/bourbon/</span> points to <span class="custom-blue">http://localhost/bourbon/index.php</span></small>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>variables</h2>
+            <h3 class="fragment custom-gray">Store values. </h3>
+            <h3 class="fragment custom-gray">Can be used throughout your code.</h3>
+            <h2 class="custom-blue fragment">$variableName = value;</h2>
+          </section>
+          <section>
+            <div>
+              <h3>Numbers</h3>
+              <pre><code>&lt;?php
+      $a = 10; //Assigns 10 to $a.
+      $b = 5; //Assigns 5 to $b.
+      $c = $a + $b;
+      echo $c; //Prints value of $c.
+  ?></code></pre><br>
+            </div>
+            <div class="fragment">
+              <h3>Strings</h3>
+              <pre><code>&lt;?php
+      $a = "Hello World"; //String Assignment
+      echo $a; //Prints value of $a.
+  ?></code></pre>
+            </div>
+          </section>
+          <section>
+            <h2>Naming Conventions</h2>
+            <ul>
+              <li class="fragment"><span class="custom-red">Must start with a letter or underscore "_"</span></li>
+              <li class="fragment"><span class="custom-red">May only be comprised of alpha-numeric characters and underscores ie. a-z, A-Z, 0-9, or _</span></li>
+              <li class="fragment">More than one word should be separated with underscores, e.g. $my_variable</li>
+              <li class="fragment">More than one word can also be distinguished by using camelCase, $myVariable</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section data-state="alert">
+            <h2>echo</h2>
+            <h3 class="fragment">outputs text to screen</h3>
+          </section>
+          <section>
+            <h3>Sample Code</h3>
+            <pre class="fragment"><code>&lt;?php
+  $a = 5;
+  echo $a;
+  $b = "hello world";
+  echo $b;
+?></code></pre>
+          <pre class="fragment"><code>&lt;?php
+  echo 5;
+  echo "hello world";
+?></code></pre>
+          <pre class="fragment"><code>&lt;?php
+  echo 5+15;
+  echo 25*5;
+?></code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Unique to PHP</h2>
+            <ul>
+              <li class="fragment">String Operators</li>
+              <li class="fragment">Foreach Loop</li>
+              <li class="fragment">Associative Arrays</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2 class="custom-blue">String Operators</h2>
+            <div class="fragment">
+              <p><span class="custom-red">Concatenation</span> means connecting/joining things</p>
+            </div>
+          </section>
+          <section>
+            <h2 class="custom-gray">Concatenation Operator<br><span class="custom-red">.</span></h2>
+            <pre><code>&lt;?php
+    $a = 'hello';
+    $b = 'world';
+    $c = $a . $b;
+    
+    // prints helloworld to screen
+    echo $c;
+    
+    // prints 12 to screen
+    echo 1 . 2;
+?></code></pre>
+          </section>
+          <section>
+            <h2 class="custom-gray">Concatenating Assignment Operator<br><span class="custom-red">.=</span></h2>
+            <pre><code>&lt;?php
+    $a = 'hello';
+    $a .= ' new recruits';
+    
+    // prints hello new recruits to screen
+    echo $a;
+?></code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2 class="custom-blue">Loops</h2>
+            <h3 class="custom-red fragment">for, while, do-while &amp; foreach</h3>
+          </section>
+          <section>
+            <h2 class="custom-blue">for</h2>
+          <pre class="fragment"><code>&lt;?php
+  $factorial = 1;
+  
+  for($i = 1; $i &lt;= 10; $i++) {
+    $factorial = $factorial * $i;
+  }
+
+  echo $factorial;
+?></code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">while</h2>
+          <pre class="fragment"><code>&lt;?php
+  $factorial = 1;
+  $i = 1;
+  
+  while($i &lt;= 10) {
+    $factorial = $factorial * $i;
+    $i++;  // increment
+  }
+
+  // prints the value of 10!
+  echo $factorial;
+?></code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">do-while</h2>
+          <pre class="fragment"><code>&lt;?php
+  $factorial = 1;
+  $i = 1;
+  
+  do {
+    $factorial = $factorial * $i;
+    $i++;  // increment
+  } while($i &lt;= 10);
+
+  // prints the value of 10!
+  echo $factorial;
+?></code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">foreach</h2>
+            <pre><code>&lt;?php
+  //$applications = array("Bourbon", "Muzi", "CodeVillage", "Erdős");
+  $applications = ["Bourbon", "Muzi", "CodeVillage", "Erdős"];
+
+  // Muzi is a music player hosted on the intranet.
+  echo $applications[1] . " is a music player hosted on the intranet.";</code></pre>
+          <pre class="fragment"><code>
+  echo "Applications developed by SDSLabs: ";
+
+  foreach($applications as $application) {
+    echo "{$application} ";
+  }
+?></code></pre>
+            <pre class="fragment"><code>// Output
+  Applications developed by SDSLabs: Bourbon Muzi CodeVillage Erdős 
+</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2 class="custom-blue">Associative Arrays</h2>
+            <p class="fragment">Associates <i class="custom-blue">values</i> to <i class="custom-blue">keys</i></p>
+            <p class="custom-red fragment">$ages["Kandoi"]</p>
+          </section>
+          <section>
+            <h2 class="custom-blue">Example</h2>
+            <pre><code>&lt;?php
+  $ages = array(
+    "Kandoi" => 19,
+    "Ravi" => 20
+  );
+
+  // Ravi is 20 years old
+  echo "Ravi is {$ages['Ravi']} years old.";</code></pre>
+            <div class="fragment">
+              <pre><code>
+  foreach($ages as $name => $age) {
+    echo "{$name} is {$age} years old.";
+  }    
+?></code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Functions</h2>
+            <p class="fragment custom-blue">Blocks of code which are used multiple times</p>
+            <p class="fragment custom-red">eg: pow function computes a <sup><small>b</small></sup></p>
+          </section>
+          <section>
+            <h2>Syntax</h2>
+            <pre><code>&lt;?php
+  function FUNCTION_NAME(arguments) {
+    // code
+  }
+?></code></pre>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <pre><code>&lt;?php
+  function sayHello($name) {
+    echo "Hello {$name}";
+  }
+
+  sayHello("new recruits");
+?></code></pre>
+            <div class="fragment">
+              <pre><code>&lt;?php
+  function sayHello($name) {
+    return "Hello {$name}";
+  }
+
+  echo sayHello("new recruits");
+?></code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Forms</h2>
+            <div>
+                <ul>
+                    <li class="fragment">Important application of basic PHP.</li>
+                    <li class="fragment">Remember the HTML assignment ? It had a form !</li>
+                </ul>
+            </div>
+          </section>
+          <section>
+            <pre><code contenteditable>&lt;form>
+  First: &lt;input type="text" name="Firstname" maxlength="3">
+  Last: &lt;input type="text" name="Lastname" maxlength="5">
+  &lt;input type="submit" value="SUBMIT">
+&lt;/form></code></pre><br>
+            <form class="fragment" style="font-size:20px;">
+              First: <input type="text" name="Firstname" maxlength="3"><br>
+              Last: <input type="text" name="Last_name" maxlength="5"><br>
+              <input type="submit" value="Submit">
+            </form>
+            <h3 class="fragment custom-gray">form has 2 important attributes <br></h3>
+            <h3 class="fragment"><span class="custom-red">Action</span>: destination of form data <br></h3>
+            <h3 class="fragment"><span class="custom-red">Method</span>: method used to send data <br></h3>
+            <h3 class="fragment custom-gray">HTTP request methods: GET &amp; POST</h3>
+          </section>
+          <section>
+            <h2>GET</h2>
+            <div>
+                <ul>
+                    <li>In &nbsp;GET method , form data is sent explicitly and is visible in the URL .</li>
+                </ul>
+                <img src="img/qYVen.png">
+            </div>
+            <div style="text-align: left;">
+                <ul>
+                    <li>Limit on the amount of data sent in single GET request.</li>
+                </ul>
+            </div>
+          </section>
+          <section>
+            <h2>POST</h2>
+            <div>This is more secure than a GET request</div>
+            <div>
+                <ul>
+                    <li>Not visible in the URL</li>
+                    <li>Used to send sensitive data</li>
+                    <li>File uploading</li>
+                    <li>No size limit</li>
+                </ul>
+                <br>
+            </div>
+            <div>
+                <br>
+            </div>
+            <div>Login data of a website is sent by POST method.</div>
+            <div>Imagine if Gmail login was based upon GET !</div>
+          </section>
+          <section>
+            <h2>FORM revisited</h2>
+            <div>So appending action and method attributes&nbsp;</div>
+            <div>to our form ,</div>
+            <div>
+                <br>
+            </div>
+            <div>
+                <img src="img/HwXJD.jpg">
+                <br>
+            </div>
+            <div>Keep an eye on 'name' attribute.</div>
+            <div>
+                <br>
+            </div>
+            <div>The client side work is done.</div>
+            <div>Now , the server side script handling form data.</div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+              <h2>FORM.PHP</h2>
+              <div>Data sent to PHP script through GET/POST is</div>
+              <div>accessed through &nbsp;associative arrays,</div>
+              <div><span class="custom-blue">$_GET</span> and <span class="custom-blue">$_POST</span> respectively .&nbsp;</div>
+              <div>
+                  <br>
+              </div>
+              <div>
+                <h3><span class="custom-red">Name</span> attribute used as index of array element</h3>
+                <h3><span class="custom-red">$_REQUEST</span> used for both GET and POST</h3>
+                <p>
+                  <img src="img/AERSN.png">
+                  <br>
+                </p>
+            </div>
+          </section>
+          <section>
+              <h2>FORM.php&nbsp;</h2>
+              <div>
+                  <img src="img/xSIr1.png">
+                  <br>
+              </div>
+              <div>
+                  <br>
+              </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Classes</h2>
+          </section>
+          <section>
+            <h2>Example</h2>
+            <pre><code>&lt;?php
+  class Member {
+    public $name = "Name";
+    public $age = 0;
+
+    function __construct($name, $age) {
+       $this->name = $name;
+       $this->age = $age;
+    }
+
+    public function description() {
+      echo "{$this->name} is a member of SDSLabs.";
+      echo "He is {$this->age} years old.";
+    }
+  }</code></pre>
+            <pre><code>
+  $parag = new Member("Parag Nandi", 19);
+
+  $parag->description();
+?></code></pre>
+            <div class="fragment">
+              <p class="custom-blue">Visibility of functions can be <b>public</b>, <b>protected</b> and <b>private</b>.</p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>MySQL</h2>
+            <div>
+              <ul>
+                <li class="fragment">An open source relational database system</li>
+                <li class="fragment">Stores data in form of tables</li>
+                <li class="fragment">Use the data stored for functionality of your webpage</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h2>Using MySQL in PHP file</h2>
+          <ul>
+            <li class="fragment">Connect to the database</li>
+            <li class="fragment">Select any data from any table or insert into any table</li>
+            <li class="fragment">Close the connection</li>
+          </ul>
+        </section>
+    
+        <section>
+          <section>
+            <h2>Connecting to database</h2>
+            <div class="custom-blue large fragment">mysqli class</div>
+            <h3 class="fragment custom-gray">Parameters:</h3>
+            <ul class="fragment">
+              <li>Server</li>
+              <li>Username</li>
+              <li>Password</li>
+              <li>Database</li>
+            </ul>
+          </section>
+          <section>
+            <pre><code>&lt;?php
+    // connecting to database
+    $link = new mysqli('server', 'user', 'password', 'database');
+    
+    if($link->connect_errno) {
+      die (&quot;Connection attempt unsuccessful!&quot;);
+    } else {
+      echo &quot;Connection made!&quot;;
+    }
+?&gt;</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Retrieving data from database</h2>
+            <div class="custom-blue large fragment">query() method</div>
+            <h3 class="fragment custom-gray">Parameter:</h3>
+            <ul class="fragment">
+              <li>Query</li>
+            </ul>
+          </section>
+          <section>
+            <pre><code>&lt;?php
+    $link = new mysqli('server', 'user', 'password', 'database');
+
+    if($link->connect_errno) {
+      die (&quot;Connection attempt unsuccessful!&quot;);
+    } else {
+      echo &quot;Connection made!&quot;;
+    }
+    
+    $result = $link->query(&quot;SELECT * FROM users&quot;);
+
+    // do some processing on $result
+?&gt;</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Closing database connection</h2>
+            <div class="custom-blue large fragment">close() method</div>
+          </section>
+          <section>
+            <pre><code>&lt;?php
+    $link = new mysqli('server', 'user', 'password', 'database');
+
+    if($link->connect_errno) {
+      die (&quot;Connection attempt unsuccessful!&quot;);
+    } else {
+      echo &quot;Connection made!&quot;;
+    }
+    
+    $result = $link->query(&quot;SELECT * FROM users&quot;);
+
+    $link->close();
+?&gt;</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <h2>links</h2>
+          <h3><a href="http://www.php.net/manual/en/">php documentation</a></h3>
+          <h3><a href="http://www.tizag.com/phpT/">Tizag - PHP</a></h3>
+          <h3><a href="http://www.php.net/manual/en/class.mysqli.php">mysqli class</a></h3>
+        </section>
+
+      </div>
+      
+    </div>
+
+    <script src="../../components/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../components/reveal.js/js/reveal.min.js"></script>
+
+    <script>
+      
+      // Full list of configuration options available here:
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+        ]
+      });
+      
+    </script>
+
+  </body>
+</html>

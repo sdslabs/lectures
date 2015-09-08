@@ -1,0 +1,322 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>DP | PAG</title>
+
+		<meta name="description" content="Dynamic Programming">
+		<meta name="author" content="Programming And Algorithms Group">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link rel="stylesheet" href="../../components/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../components/reveal.js/css/theme/default.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../../components/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/sdslabs.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>PAG</h1>
+					<img class="image" src="pag.png" style="height:350px;"></img>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Recursive Functions</h2>
+						<p>
+							A function is said to be recursive if it calls itself.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Fibonacci series</h2>
+						<div class="fragment">
+							<p>
+							<code><pre>
+f(0) = 0
+f(1) = 1
+
+f(n) = f(n-1) + f(n-2) for n > 1
+
+0, 1, 1, 2, 3, 5, 8, 13...
+</pre></code>
+							</p>
+						</div>
+					</section>
+					<section>
+						<h2 class="custom-blue">Method</h2>
+						<p>
+							This is the pseudocode for calculating Nth fibonacci number.
+<code>
+	<pre>
+function fibo(int n)
+  if n &lt; 2:
+    return n
+  else:
+    return fibo(n-1) + fibo(n-2)
+end fibo</pre>
+</code>
+						</p>
+					</section>
+					<section>
+						<h2 class="custom-blue">Visualization of Steps Followed</h2>
+						<p class="fragment">
+							<img src="img/fibo.png" alt="Fibonacci Recursion">
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Power Function</h2>
+						<p class="fragment">
+							Calculating the value of a<sup>n</sup>
+						</p>
+					</section>
+					<section>
+						<h2>Pseudocode</h2>
+						<p>
+<code>
+	<pre>
+function power(int a, int n)
+  if n == 0:
+    return 1
+  else:
+    return power(a, n - 1) * a
+end power</pre>
+</code>
+						</p>
+					</section>
+					<section>
+						<h2 class="custom-blue">Process</h2>
+						<p class="fragment">
+							In both the examples, we check for a particular case and end the process. Or else we repeat the process of calculation. 
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Better way of Calculating a<sup>n</sup></h2>
+					</section>
+					<section>
+						<div class="fragment">
+						<h3 class="custom-blue">Pseudocode 1</h3>
+						<p>
+						<code>
+	<pre>
+function power(int a, int n)
+  if n == 0:
+    return 1
+  else:
+    if n is even:
+      return power(a, n/2) * power(a, n/2)
+    else:
+      return a * power(a, n/2) * power(a, n/2)
+end power</pre>
+</code></p>
+						</div>
+						<div class="fragment">
+						<h3 class="custom-blue">Pseudocode 2</h3>
+						<p class="fragment">
+						<code>
+	<pre>
+function power(int a, int n)
+  if n == 0:
+    return 1
+  else:
+    int x = power(a, n/2)
+    if n is even:
+      return x * x
+    else:
+      return a * x * x
+end power</pre>
+</code></p>
+					</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Dynamic Programming</h2>
+					</section>
+
+					<section>
+						<h2 class="custom-blue">What is Dynamic Programming?</h2>
+						<p>
+							It is a technique used to solve a problem by first solving smaller sub-problems.
+						</p>
+					</section>
+					<section>
+						<h2 class="custom-blue">Two Approaches</h2>
+						<p class="fragment">
+							<ul>
+								<li>Bottom-Up</li>
+								<li>Top-down</li>
+							</ul>
+						</p>
+					</section>
+					<!-- <section>
+						<h2>Do you know that you already know Dynamic Programming?</h2>
+						<p class="fragment">
+							What is the value of the summation:<br>
+							1 + 1 + 1 + 1
+							<span class="fragment">
+								= 4
+							</span>
+						</p>
+					</section>
+					<section>
+						<p>
+							What is the value of 1 + 1 + 1 + 1 + 1?<br>
+						</p>
+						<p class="fragment">
+							1 + 1 + 1 + 1 + 1 = 5
+						</p>
+					</section> -->
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Example</h2>
+						<p class="fragment">
+							How will you calculate the value of N! (N factorial)?<br>
+						</p>
+						<br>
+						<p class="fragment">
+							How will you calculate for many such values of N?
+						</p>
+						<p class="fragment">
+							Say N = 5, 9, 24 and 30.
+						</p>
+					</section>
+					<section>
+						<h2 class="custom-blue">Naive Approach</h2>
+						<p class="fragment">
+							For each value of N, you will find the answer by multiplying all the numbers from 1 to N.
+						</p>
+					</section>
+					<section>
+						<h2 class="custom-blue">Using Dynamic Programming</h2>
+						<p class="fragment">
+							Rather than calculating the value of <span class="custom-blue">N!</span> for each N, we store the result as we calculate the value for the maximum value of N (30 in this case).
+						</p>
+						<p class="fragment">
+							Thus we have stored the value of 1!, 2!, 3!, ..., N!.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="custom-blue">Calculating Nth fibonacci term</h2>
+						<div class="fragment">
+							<p>
+							<code><pre>
+f(0) = 0
+f(1) = 1
+
+f(n) = f(n-1) + f(n-2) for n > 1
+
+0, 1, 1, 2, 3, 5, 8, 13...
+</pre></code>
+							</p>
+						</div>
+					</section>
+					<section>
+						<h2 class="custom-blue">Recursive Approach</h2>
+						<p class="fragment">
+							When we follow recursive approach these are the various steps followed:<br>
+							<img src="img/fibo.png" alt="Fibonacci Recursion">
+						</p>
+					</section>
+					<section>
+						<h2 class="custom-blue">Using Dynamic Programming</h2>
+						<div class="fragment">
+						<h3>Bottom-Up</h3>
+							<p>
+<code><pre>
+fibo[0] = 0
+fibo[1] = 1
+
+for i = 2, 3, 4, ... n:
+  fibo[i] = fibo[i-1] + fibo[i-2]</pre>
+</code>
+							</p>
+						</div>
+						<div class="fragment">
+						<h3>Top-Down</h3>
+							<p>
+								<code><pre>
+function fibo(int n)
+  if n &lt; 2:
+    return n
+  else if mem_fibo[n] is already stored:
+    return mem_fibo[n]
+   else:
+    mem_fibo[n] = fibo(n-1) + fibo(n-2)
+    return mem_fibo[n]
+end fibo</pre>
+</code>
+
+							</p>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>The End</h1>
+<code>
+						<a href="http://pag.sdslabs.co/blog/">http://pag.sdslabs.co/blog/</a><br>
+						<a href="https://www.facebook.com/groups/sdspag/">https://www.facebook.com/groups/sdspag/</a><br>
+						<a href="https://www.facebook.com/sdspag/">https://www.facebook.com/sdspag/</a><br>
+</code>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../components/reveal.js/lib/js/head.min.js"></script>
+		<script src="../../components/reveal.js/js/reveal.min.js"></script>
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>

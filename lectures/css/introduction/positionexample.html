@@ -1,0 +1,42 @@
+<html>
+<head>
+	<style type="text/css">
+		#container {
+			height: 1000px;
+		}
+		.divclass {
+			border: 2px solid black;
+			font-size: 2.5em;
+			padding: 10px;
+			width: auto;
+
+		}
+		#a {
+			position: relative;
+		}
+		#b {
+			position: relative;
+			top: 25px;
+			left: 0px;
+		}
+		#c {
+			position: absolute;
+			top:196px;
+			left: 324px;
+		}
+		#d {
+			position: fixed;
+			top: 300px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+	<div id="a" class="divclass">This is a sample div</div>
+	<div id="b" class="divclass">This is a relatively positioned div</div>
+	<div id="c" class="divclass">This is an absolutely positioned div</div>
+	<div id="d" class="divclass">This is a fixed div</div>
+	</div>
+</body>
+</html>

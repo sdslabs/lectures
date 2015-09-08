@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript | SDSLabs</title>
+        <link rel="stylesheet" href="../../components/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="../../components/reveal.js/css/theme/default.css">
+        <link rel="stylesheet" href="../../components/reveal.js/lib/css/zenburn.css">
+        <script src="../../components/jquery/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>Javascript Lecture</h1>
+                        <h3>SDSLabs</h3>
+                    </section>
+                    <section>
+                        <h2>As always, ask questions</h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>What is javascript used for?</h2>
+                        <p>Your applications's front end</p>
+                        <ul>
+                            <li>Dynamically load content from the server without interfering the current page</li>
+                            <li>Manipulate HTML elements in a document</li>
+                            <li>Play music and videos on the web page</li>
+                            <li>Awesome animations</li>
+                            <li>Make simple games for the web</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Even this presentation is based upon javascript</h4>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Using javascript in your html page</h2>
+                        <p>The &lt;script&gt; tag</p>
+                    </section>
+                    <section>
+                        <p>Option 1 - Internal</p>
+<pre><code>&lt;script&gt;
+  var x = 10;
+  // Some really cool and badass code
+&lt;/script&gt;</code></pre>
+                        <div><br></div>
+                        <p>Option 2 - External</p>
+                        <pre><code>&lt;script src=&quot;filename.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Javascript Basics</h2>
+                        <p>How is it different from c++ or java?</p>
+                        <p>For starters, it is much easier to understand and write</p>
+                    </section>
+                    <section>
+                        <h3>Variables</h3>
+                        <p>Variables do not have any type</p>
+<pre><code>var num = 10;
+var pi = 3.1415;
+var str = 'A string';
+var arr = ['This', 'is', 'an', 'array'];
+var sum = function (a, b) {
+  return a + b;
+};</code></pre>
+                    </section>
+                    <section>
+                        <h3>Print Statement and Debugging</h3>
+                        <p>Chrome console is your best friend</p>
+<pre><code>var x = '';
+
+// Some really cool code goes here
+// This code fetches a list of songs
+// from muzi and stores them in a
+// javascript object
+
+console.log(x);</code></pre>
+                        <img src="img/console_fail.jpg">
+                        <img src="img/console_success.jpg"/>
+                    </section>
+                    <section>
+                        <h3>Objects in Javascript</h3>
+                        <p>It is very easy to define and access objects in javascript</p>
+<pre><code>var muzi = {
+  currentTrack: 'Hey jude!',
+  currentPlaylist: 'Likes',
+  view: {
+    name: 'playlist',
+    render: function () {
+      // Code to render the playlist view
+      // It displays all the tracks in the
+      // selected playlist
+    }
+  }
+};
+
+console.log(muzi.currentTrack);
+muzi.view.name = 'tracks';
+muzi.view.render();</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Manipulating HTML Elements</h2>
+                        <p>Javascript can access HTML Elements and manipulate them for really cool results</p>
+                    </section>
+                    <section>
+                        <h3>An example using vanilla javascript</h3>
+<pre><code>document.getElementById('clickable').onclick = function () {
+  document.getElementsByClassName('chng')[0].innerHTML = 'This is hard :(';
+  document.getElementsByTagName('span')[0].style.color = '#fff';
+};</code></pre>
+                        <p id="clickable" style="color: #35C0CD; cursor: pointer;">Click Me</p>
+                        <p><span class="chng" style="color: #35C0CD;">(\__/)</span></p>
+                        <script>
+                            document.getElementById('clickable').onclick = function () {
+                                document.getElementsByClassName('chng')[0].innerHTML = 'This is hard :(';
+                                document.getElementsByClassName('chng')[0].style.color = '#fff';
+                            }
+                        </script>
+                    </section>
+                    <section>
+                        <h3>The Flow</h3>
+                        <p>The main process for content manipulation</p>
+                        <ul>
+                            <li>Use css selectors to specify an html element</li>
+                            <li>This javascript object has various properties and functions associated with it</li>
+                            <li>Add various event listeners</li>
+                            <li>Specify a function that is called whenever an event is triggered</li>
+                            <li>Modify the properties of such javascript objects to change their appearence</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Introducing jQuery</h2>
+                        <p>An open source Javascript library</p><br>
+                    </section>
+                    <section>
+                        <h3>Using jQuery</h3>
+                        <pre><code>&lt;script src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;</code></pre>
+                        <p>Include this in the head tag of your html page</p>
+                    </section>
+                    <section>
+                        <h3>$ - jQuery function</h3>
+<pre><code>$('#clickable').on('click', function () {
+  $('.chng').html( 'This is better!' );
+  $('span').css('color', '#fff');
+});</code></pre>
+                        <p id="clickable2" style="color: #35C0CD; cursor: pointer;">Click Me</p>
+                        <p><span class="chng2" style="color: #35C0CD;">(\__/)</span></p>
+                        <script>
+                            $('#clickable2').on('click', function () {
+                                $('.chng2').html( 'This is better!' );
+                                $('.chng2').css('color', '#fff');
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3>The Flow</h3>
+                        <p>The main process remains the same</p>
+                        <ul>
+                            <li>You pass a css selector to the &quot;$&quot; function</li>
+                            <li>This returns an HTML element which has various properties and functions</li>
+                            <li>Add event listeners</li>
+                            <li>Specify callback functions</li>
+                            <li>Modify the properties of the elements</li>
+                        </ul>
+                    </section>
+                </section>
+<!--                 <section>
+                    <section>
+                        <h2>Synchronous and Asynchronous</h2>
+                        <p>The theoretical part behind callbacks and event listeneres</p>
+                    </section>
+                    <section>
+                        <h3>Synchronous Programming</h3>
+                        <p>A synchronous script executes all commands in order</p>
+<pre><code>var x = '';
+
+// You make a request to the server for some data
+// The script waits till the request is completed
+// Once the request is completed, the following
+// code is executed</code></pre>
+                    </section>
+                    <section>
+                        <h3>Asynchronous Programming</h3>
+                        <p>Such a script starts the process, and while waiting for it to complete executes the remaining script</p>
+<pre><code>// Once the request is made, the following code
+// is executed while the script waits for the
+// request to be completed. Once the request is
+// completed the callback function associated with
+// it is executed</code></pre>
+                    </section>
+                </section> -->
+                <section>
+                    <section>
+                        <h2>Some more examples</h2>
+                    </section>
+                    <section>
+                        <h3>A Click Counter</h3>
+<pre><code>var click = 0;
+$('#counter').on('click', function () {
+  click = click + 1;
+  $('#count').html(click);
+});</pre></code>
+                        <p id='counter' style="cursor: pointer; color: #35C0CD;">Click Me</p>
+                        <p><span id='count'>0</span> Clicks</p>
+                        <script>
+                            var click = 0;
+                            $('#counter').on('click', function () {
+                                click = click + 1;
+                                $('#count').html(click);
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3>Fadeout and Fadein</h3>
+                        <p id="fade" style="cursor: pointer; color: #35C0CD;">This is going to disappear!</p>
+                        <p id="hidden" class="hidden">Hello there!</p>
+<pre><code>$('#fade').on('click', function () {
+  $('#fade').fadeOut('slow');
+  $('.hidden').fadeIn('slow');
+});</code></pre>
+                        <script>
+                            $('.hidden').hide();
+                            $('#fade').click(function () {
+                                $('#fade').fadeOut('slow');
+                                $('.hidden').fadeIn('slow');
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3>A Simple clock</h3>
+                        <p><span id="date"></span></p>
+<pre><code>var interval = setInterval(function () {
+  var date = new Date();
+  var time = date.toTimeString();
+  $('#date').html(time);
+}, 1000);
+
+$('#stop').on('click', function () {
+    clearInterval(interval);
+});</code></pre>
+                        <p><span id="stop" style="cursor: pointer; color: #35C0CD;">Stop</span></p>
+                        <script>
+                            var interval = setInterval(function () {
+                                var date = new Date();
+                                $('#date').html(date.toTimeString().split(' ')[0]);
+                            }, 1000);
+                            $('#stop').on('click', function () {
+                                clearInterval(interval);
+                            });
+                        </script>
+                    </section>
+                    <section>
+                        <h3>Super Mario on JS Steroids</h3>
+<pre><code>$(document).on(&quot;keypress&quot;, function (event) {
+  var key = event.which;
+  if (key == 81) {
+    $('#game').animate({
+      left: "+=50"
+    }, 100);
+  }
+  else if (key == 82) {
+    $('#game').animate({
+      left: "-=50"
+    }, 100);
+  }
+  else if (key == 87) {
+    $('#game').animate({
+      top: "-=50"
+    }, 100);
+  }
+  else if (key == 69) {
+    $('#game').animate({
+      top: "+=50"
+    }, 100);
+  }
+});</code></pre>
+                        <div><img id="game1" style="position:relative;" src="img/game.jpg"></div>
+                        <script>
+                            $(document).on('keydown', function (e) {
+                                var key = e.which;
+                                if (key == 81) {
+                                    $('#game1').animate({
+                                        left: "+=50"
+                                    }, 100);
+                                }
+                                else if (key == 82) {
+                                    $('#game1').animate({
+                                        left: "-=50"
+                                    }, 100);
+                                }
+                                else if (key == 87) {
+                                    $('#game1').animate({
+                                        top: "-=50"
+                                    }, 100);
+                                }
+                                else if (key == 69) {
+                                    $('#game1').animate({
+                                        top: "+=50"
+                                    }, 100);
+                                }
+                            });
+                        </script>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>How is all this happening?</h2>
+                        <p>The same script would not work on your terminal</p>
+                    </section>
+                    <section>
+                        <h3>Document Object Model (DOM)</h3>
+                        <p>Treat everything in the HTML document as an object</p>
+                        <ul>
+                            <li>All web browsers use a layout engine to convert the html document into html elements</li>
+                            <li>It adds various properties and functions for each element to manipulate the style, the data and to add events</li>
+                            <li>The browser then allows javascript to access these elements and use them as objects</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>AJAX</h2><h3>(Asynchronous Javascript and XML)</h3>
+                        <p>It is used to fetch content from the server without affecting the display of the current web page</p>
+                    </section>
+                    <section>
+                        <h3>Basic Syntax</h3>
+                        <p>Passing an object into the function</p>
+<pre><code>$.ajax({
+  url: '/muzi',
+  type: 'GET',
+  dataType: 'json',
+  success: function (data) {
+    console.log(data);
+  },
+  error: function (xhr) {
+    console.log(xhr);
+  }
+})</code></pre>
+                    </section>
+                    <section>
+                        <h3>What does asynchronous mean?</h3>
+                        <p>It basically means that the script is free to execute other commands while the result is being loaded</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>
+                            A Practical use for Form Validation
+                        </h2>
+                        <p>Say you have a simple form</p>
+<pre><code>&lt;form id=&quot;registration&quot;&gt;
+  Name: &lt;input id=&quot;name&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+  Email: &lt;input id=&quot;email&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+  Password: &lt;input id=&quot;pass&quot; type=&quot;password&quot;&gt;&lt;br&gt;
+  Confirm Password: &lt;input id=&quot;cpass&quot; type=&quot;password&quot;&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+                    </section>
+                    <section>
+                        <h3> The Code </h3>
+<pre><code>$('#registration').on('submit', function (event) {
+  // Get all the details from the form
+  var name = $('#name').val();
+  var email = $('#email').val();
+  var pass = $('#pass').val();
+  var cpass = $('#cpass').val();
+
+  // Check for full name
+  if (name.indexOf(' ') == -1) {
+    alert('Please enter full name!');
+    event.preventDefault();
+  }
+  // Check whether both passwords match
+  else if (pass != cpass) {
+    alert('Both passwords do not match!');
+    event.preventDefault();
+  }
+});</pre></code>
+                    </section>
+                </section>
+                <section>
+                    <h2>Clarify any doubts that you may have</h2>
+                </section>
+            </div>
+        </div>
+        <script src="../../components/reveal.js/js/reveal.min.js"></script>
+        <script src="../../components/reveal.js/lib/js/head.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                dependencies: [
+                    { src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>

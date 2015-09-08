@@ -1,0 +1,378 @@
+<!doctype html>  
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Introduction to C++</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="../../components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../components/reveal.js/css/theme/beige.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../components/reveal.js/lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="css/sdslabs.css">
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <section>
+            <h1>Introduction to C++</h1>
+            <h3>SDSLabs</h3>          
+            <p>
+              <i><small><a href="mailto:satyam.vijay15@gmail.com">- Satyam Vijay</a></small></i> <br>
+              <i><small> <a href="mailto:abhinav.tushar.vs@gmail.com">- Abhinav Tushar</a></small></i> <br>
+            </p>
+          </section>
+          <section>
+            <h2 class="custom-red">What this lecture is all about?</h2>
+            <h3 class="fragment custom-gray">A very basic primer of computer programming <br> using C++ language</h3>
+          </section>
+          <section>
+            <h2 class="custom-red">Why should you learn programming ?</h2>
+            <img src="img/q.png" alt="" class="fragment plain">
+          </section>
+          <section>
+            <h2 class="custom-red">Why should you learn programming ?</h2>
+            <h3 class="fragment">Programming is <span class="custom-blue">Automation</span></h3>
+            <h3 class="fragment">Programming teaches you how to <span class="custom-blue">break problems</span></h3>
+            <h3 class="fragment">It’s a way to <span class="custom-blue">create change</span></h3>
+            <h3 class="fragment">Programming is <span class="custom-red">fun</span></h3>
+          </section>
+          <section>
+            <h2 class="custom-red">Why C++ ?</h2>
+            <h3 class="fragment">Powerful and fast</h3>
+            <h3 class="fragment">It will provide you a better understanding of other systems</h3>
+            <h5 class="fragment custom-red">** <i>You will hardly be seen as a hacker if you don’t know C++</i> **</h5>
+          </section>
+        </section>
+
+        <section data-state="alert">
+
+          <section>
+            <h2>Getting your machines ready</h2>
+            <div class="fragment">
+              <h3>Various <span class="custom-blue">IDEs</span> are available for programmming in C++</h3>
+              <ul>
+              <li class="fragment"><a href="http://www.codeblocks.org">CodeBlocks</a> (easy to use, free, cross platform)</li>
+              <li class="fragment"><a href="http://www.eclipse.org/">Eclipse CDT</a> (great but a bit advanced for beginners)</li>
+              <li class="fragment"><a href="http://www.bloodshed.net/devcpp.html">DevC++</a> (windows only)</li>
+              <li class="fragment">and many more . . .</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        
+        <section>
+          <section>
+            <h2>variables</h2>
+            <h3 class="fragment custom-gray">Store values. </h3>
+            <h2 class="custom-blue fragment">data type variable = value;</h2>
+            <p class="fragment"><b>int x = 34;</b></p>
+          </section>
+          <section>
+            <div>
+              <h3>Basic datatypes</h3>
+              <ul>
+              	<li ><span class="custom-blue">char</span> : -128 to 127, <span class="custom-red">1 byte</span></li>
+              	<li ><span class="custom-blue">short</span> : -32768 to 32767, <span class="custom-red">2 bytes</span></li>
+              	<li ><span class="custom-blue">int</span> : -2147483648 to 2147483647, <span class="custom-red">4 bytes</span></li>
+              	<li ><span class="custom-blue">float</span> : +/- 3.4x10<sup>(+/- 38)</sup>, <span class="custom-red">4 bytes</span></li>
+              	<li ><span class="custom-blue">double</span> : +/- 1.7x10<sup>(+/- 308)</sup>, <span class="custom-red">8 bytes</span></li>
+              	<li ><span class="custom-blue">bool</span> :true or false, <span class="custom-red">1 byte</span></li>
+              </ul><br><br>
+              <h4 class="fragment custom-red">Nothing to be remembered here, just a bit <i>show-off</i></h4>
+            </div>
+          </section>
+          <section>
+            <h2>Naming Conventions</h2>
+            <ul>
+              <li class="fragment">Must start with an alphabet or underscore "_"</li>
+              <li class="fragment">May only be comprised of alpha-numeric characters and underscores. a-z, A-Z, 0-9, or _ </li>
+              <li class="fragment">Cannot use reserved words (keywords), like 'int', 'while' etc as identifiers.</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Operators</h2>
+            <ul>
+              <li class="fragment">Assignment Operators</li>
+              <li class="fragment">Arithmetic Operators</li>
+              <li class="fragment">Comparison Operators</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="custom-gray">Assignment Operator<br>
+              <span class="custom-red">=</span></h2>
+            <pre><code>
+    int a = 5;
+    char b = 'h';
+
+</code></pre>
+          </section>
+          <section>
+            <h2 class="custom-gray">Arithmetic Operator</h2>
+            <ul>
+              <li>Addition: +</li>
+              <li>Subtraction: -</li>
+              <li>Division: /</li>
+              <li>Multiplication: *</li>
+              <li>Modulus: %</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="custom-gray">Comparison Operator</h2>
+            <ul>
+              <li>Equal To: ==</li>
+              <li>Not Equal To: !=</li>
+              <li>Less Than: &lt;</li>
+              <li>Greater Than: ></li>
+              <li>Less Than or Equal To: &lt;=</li>
+              <li>Greater Than or Equal To: >=</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>The Console</h2>
+            <h3 class="fragment">outputting and inputting values</h3>
+            <h3 class="fragment">using cout and cin</h3>
+            <pre class="fragment"><code>
+    #include&ltiostream&gt
+
+</code></pre>
+          </section>
+          <section>
+          	<h2>Cout</h2>
+          	<h3 class="fragment custom-blue">prints values to console</h3>
+          	<pre class="fragment"><code>
+    cout << "Hello";
+          	</code></pre>
+          	<pre class="fragment"><code>
+    int x = 5;
+    cout << "Hello, x = " << x;
+          	</code></pre>
+          </section>
+          <section>
+          	<h2>Cin</h2>
+          	<h3 class="fragment custom-blue">takes user value from console and saves it to a variable</h3>
+          	<pre class="fragment"><code>
+    int number;
+    cin >> number;
+    int twice_of_number = number * 2;
+    cout << twice_of_number;
+          	</code></pre>
+          </section>
+          <section>
+            <h2>System Pause</h2>
+            <h3 class="fragment custom-blue">Pauses the console until a key is presed</h3>
+            <pre class="fragment"><code>
+    cout << "Sample Output";
+    system("pause");
+            </code></pre>
+            <h4 class="fragment custom-red">Special case for devcpp</h4>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Conditional statements</h2>
+            <h3 class="custom-red fragment">if, if-else & switch</h3>
+          </section>
+          <section>
+            <h2 class="custom-blue">if</h2>
+          <pre class="fragment"><code>
+  int marks = 100;
+  if (marks==100)
+    cout << "Congrats !! Chapo.";
+
+</code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">if-else</h2>
+          <pre class="fragment"><code>
+  int marks = 88;
+  if (marks==100)
+    cout << "Congrats !! Chapo.";
+  else
+    cout << ":|";
+
+</code></pre>
+          </section>
+          <section>
+            <h2 class="custom-blue">switch</h2>
+            <pre class="fragment"><code>
+  switch (x) {
+  case 1:
+    cout << "x is 1";
+    break;
+  case 2:
+    cout << "x is 2";
+    break;
+  default:
+    cout << "value of x unknown";
+  }
+
+</code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>arrays</h2>
+            <h3 class="custom-red fragment">Lots of values in one parent variable</h3>
+            <h5 class="fragment custom-blue">Remember indexed values ?? Maths</h5>
+            <img class="fragment" src="img/arr math.jpg">
+            <h4 class="fragment">the elements collectively are called an 'array' of elements</h4>
+            <img class="fragment" src="img/arr.jpg">
+          </section>
+          <section>
+          	<h2>creating arrays</h2>
+          	<h3 class="fragment custom-blue">data type array[length]</h3>
+          	<pre class="fragment"><code>
+  int arr[3];
+  arr[0] = 34;
+  arr[1] = 54;
+  arr[2] = 13;
+  </code></pre>
+  			<pre class="fragment"><code>
+  int arr[3] = {34, 54, 13};
+  </code></pre>
+          </section>
+          <section>
+          	<h2>accessing array members</h2>
+          	<h3 class="fragment">array[index]</h3>
+          	<pre class="fragment"><code>
+  char y = 'c';
+  char array[4] = {'a', 'b', 'f', 'd'};
+  array[2] = y; // now array is {'a', 'b', 'c', 'd'}
+  </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>loops</h2>
+            <h3 class="custom-red fragment">For, While, Do While</h3>
+          </section>
+          <section>
+            <h2 class="custom-red">For Loop</h2>
+            <pre><code>
+  for (initialize; conditional statement; update){
+     do this code;
+  }
+  </code></pre>
+            <pre class="fragment"><code>
+  int years[4] = {2002, 2007, 2010, 2013};
+
+  for (int i = 0; i < 4; i++){
+  	 cout << years[i] << "\n";
+  }
+            </code></pre>
+          </section>
+          <section>
+            <h2 class="custom-red">While Loop</h2>
+            <pre><code>
+  while (conditional statement is true) {
+    //do this code;
+  }
+  </code></pre>
+            <pre class="fragment"><code>
+  int years[4] = {2002, 2007, 2010, 2013};
+
+  int i = 0;
+  while(i<4){
+  	 cout << years[i] << "\n";
+  	 i += 1;
+  }
+            </code></pre>
+          </section>
+          <section>
+            <h2 class="custom-red">Do While</h2>
+            <pre class="fragment"><code>
+  int years[4] = {2002, 2007, 2010, 2013};
+
+  int i = 0;
+  do{
+  	 cout << years[i] << "\n";
+  	 i += 1;
+  }
+  while(i < 4);
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>The Program structure</h2>
+          <pre class="fragment"><code>
+    /*
+    	C++ Program
+    	Author SDSLabs
+    */
+    
+    #include&ltiostream&gt
+    //include the header files you need here
+
+    using namespace std;
+
+    int main() // it all begins from here
+    {
+    	//your code here
+    	return 0;
+    }
+
+</code></pre>
+
+		<h3 class="fragment custom-red">Do write comments. It helps when you revisit the code to make changes</h4>
+        </section>
+        <section>
+          <img src="img/ques.jpg">
+        </section>
+        <section>
+          <h2>Further Learning</h2>
+          <h3>Try solving problems on Codevillage, Spoj.pl . . </h3>
+          <h3><a href="http://www.wibit.net/curriculum/the_c_lineage/programming_cpp">Wibit</a></h3>
+          <h3><a href="http://www.learncpp.com/">LearnCpp</a></h3>
+          <h3><a href="http://www.cplusplus.com/">CPlusPlus</a></h3>
+          <h4 class="fragment">Google what are <span class="custom-blue">functions</span> and how to use them, and what is <span class="custom-blue">Object Oriented Programming</span></h4>
+        </section>
+        <section>
+          <h2>Join these groups</h2>
+          <h3><a href="fb.com/groups/SDSWebDev/">fb.com/groups/SDSWebDev/</a></h3>
+          <h3><a href="fb.com/groups/sdspag/">fb.com/groups/sdspag/</a></h3>
+        </section>
+      </div>
+      
+    </div>
+
+    <script src="../../components/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../components/reveal.js/js/reveal.min.js"></script>
+
+    <script>
+      
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+        ]
+      });
+      
+    </script>
+
+  </body>
+</html>
