@@ -6,6 +6,47 @@
 		<meta name="author" content="Palai">
 		<meta name="description" content="HTML example">
 		<link rel="stylesheet" type="text/css" href="form.css">
+		<script>
+			function validate(ch){
+			if(event.keyCode < 48 || event.keyCode > 57)
+			{
+				document.getElementById('cont').value='';
+				window.alert("Only numbers are allowed!");
+				return false;
+			}
+			}
+			function validateForm() {
+				var name = document.forms["sdsform"]["name"].value;
+				var author = document.forms["sdsform"]["author"].value;
+				var content = document.forms["sdsform"]["content"].value;
+				var contact = document.forms["sdsform"]["contact"].value;
+				if(name==null || name =="")
+				{
+				 	alert("Name must be filled");
+				  	return false;
+				}
+				else if(author==null || author=="")
+				{
+				   	alert("Author name must be filled");
+				   	return false;
+				}
+				else if(content==null || content=="")
+				{
+				  	alert("Content must not be empty");
+				   	return false;
+				}
+				else if(contact==null || contact=="")
+				{
+				  	alert("Contact field must not be empty");
+				   	return false;
+				}
+				else
+				{
+				  	alert("Hooray!!");
+				   	return true;
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="side_view">
@@ -16,7 +57,7 @@
 			<h1>The Writer's World Welcomes You.</h1>
 			<h3>Lorem Ipsum Dolor Amet</h3>
 			<div class="post">
-				<form method="POST" action="blog.php">
+				<form method="POST" action="" onsubmit = "return validateForm()"name = "sdsform">
 				<div>Name:<br />
 				<input class="details" type="text" name="name">
 				</div>
@@ -26,7 +67,7 @@
 				</div>
 				<div>
 				<div>Contact No:<br />
-				<input class="details" type="text" name="contact" pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}" onkeypress="validate(this)"></input>
+				<input class="details" type="text" name="contact" id = "cont" onkeypress="validate(this)"></input>
 				</div>
 				Content:<br />
 				<textarea class="detail" name="content"></textarea> 
@@ -36,13 +77,7 @@
 			</div>		 	
 		</div>
 		<script>
-			function validate(ch){
-				if(event.keyCode < 48 || event.keyCode > 57)
-				{
-					window.alert("Only numbers are allowed!");
-					return false;
-				}
-			}
+
 		</script>
 	</body>
 </html>
