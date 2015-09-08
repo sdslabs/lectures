@@ -1,0 +1,63 @@
+html,body{
+	margin: 0px;
+	height: 100%;
+	font-family: oxygen;
+}
+.side_view {
+	position: fixed;
+	height: 100%;
+	width: 20%;
+	background-color: #ffffff;
+	
+}
+#sdslabs_main_pics{
+	height: 12.5%;
+	width: 50%;
+	padding-left: 20%;
+	
+}
+.title_writer{
+	height: 25%;
+	width:100%;
+	text-align: center;
+	color: #212121;
+}
+h1{ 
+	color: #333333;
+	font-size: 45px;
+}
+h3
+{
+	color: #333333;
+}
+div.post{
+	padding-left: 500px;
+  	font-family: oxygen;
+  	font-size: 20px;
+	text-align: left;
+	color: #424242;
+	
+}
+.details{
+	height: 25px;
+	width: 400px;
+}
+.detail{
+	height: 150px;
+	width: 400px;
+	margin-bottom: 0px;
+}
+#submit{
+	margin-left: 150px;
+	border-radius: 6px; 
+	height: 50px; 
+	width: 100px; 
+	background-color:#FF7043; 
+	font-size: 20px;
+}
+footer{
+	color: red;
+	position: absolute;
+	padding-left: 20px;
+	bottom: 50px;		
+}
