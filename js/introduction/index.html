@@ -144,6 +144,7 @@ muzi.view.render();</code></pre>
                 </section>
                 <section>
                     <section>
+                    <h2>jQuery</h2>
                     <p>An open source Javascript library</p>
                     <p>jQuery focusses on "write less, do more" motto</p><br> 
                     </section>
@@ -315,74 +316,6 @@ $('#stop').on('click', function () {
                                 }
                             });
                         </script>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>How is all this happening?</h2>
-                        <p>The same script would not work on your terminal</p>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>AJAX</h2><h3>(Asynchronous Javascript and XML)</h3>
-                        <p>It is used to fetch content from the server without affecting the display of the current web page</p>
-                        </section>
-                        <section>
-                            <h3>Basic Syntax</h3>
-                            <p>Passing an object into the function</p>
-    <pre><code>$.ajax({
-      url: '/muzi',
-      type: 'GET',
-      dataType: 'json',
-  success: function (data) {
-    console.log(data);
-  },
-  error: function (xhr) {
-    console.log(xhr);
-  }
-})</code></pre>
-                    </section>
-                    <section>
-                        <h3>What does asynchronous mean?</h3>
-                        <p>It basically means that the script is free to execute other commands while the result is being loaded</p>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>
-                            A Practical use for Form Validation
-                        </h2>
-                        <p>Say you have a simple form</p>
-<pre><code>&lt;form id=&quot;registration&quot;&gt;
-  Name: &lt;input id=&quot;name&quot; type=&quot;text&quot;&gt;&lt;br&gt;
-  Email: &lt;input id=&quot;email&quot; type=&quot;text&quot;&gt;&lt;br&gt;
-  Password: &lt;input id=&quot;pass&quot; type=&quot;password&quot;&gt;&lt;br&gt;
-  Confirm Password: &lt;input id=&quot;cpass&quot; type=&quot;password&quot;&gt;&lt;br&gt;
-  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
-&lt;/form&gt;
-</code></pre>
-                    </section>
-                    <section>
-                        <h3> The Code </h3>
-<pre><code>$('#registration').on('submit', function (event) {
-  // Get all the details from the form
-  var name = $('#name').val();
-  var email = $('#email').val();
-  var pass = $('#pass').val();
-  var cpass = $('#cpass').val();
-
-  // Check for full name
-  if (name.indexOf(' ') == -1) {
-    alert('Please enter full name!');
-    event.preventDefault();
-  }
-  // Check whether both passwords match
-  else if (pass != cpass) {
-    alert('Both passwords do not match!');
-    event.preventDefault();
-  }
-});</pre></code>
                     </section>
                 </section>
                 <section>

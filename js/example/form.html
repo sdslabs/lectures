@@ -10,7 +10,7 @@
 			function validate(ch){
 			if(event.keyCode < 48 || event.keyCode > 57)
 			{
-				document.getElementById('cont').value='';
+				document.getElementById('contact').value='';
 				window.alert("Only numbers are allowed!");
 				return false;
 			}
@@ -67,7 +67,7 @@
 				</div>
 				<div>
 				<div>Contact No:<br />
-				<input class="details" type="text" name="contact" id = "cont" onkeypress="validate(this)"></input>
+				<input class="details" type="text" name="contact" id = "contact" onkeypress="validate(this)"></input>
 				</div>
 				Content:<br />
 				<textarea class="detail" name="content"></textarea> 
