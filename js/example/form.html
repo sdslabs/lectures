@@ -25,6 +25,9 @@
 				<input  class="details" type="text" name="author">
 				</div>
 				<div>
+				<div>Contact No:<br />
+				<input class="details" type="text" name="contact" pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}" onkeypress="validate(this)"></input>
+				</div>
 				Content:<br />
 				<textarea class="detail" name="content"></textarea> 
 				</div>
@@ -32,5 +35,14 @@
 				</form>
 			</div>		 	
 		</div>
+		<script>
+			function validate(ch){
+				if(event.keyCode < 48 || event.keyCode > 57)
+				{
+					window.alert("Only numbers are allowed!");
+					return false;
+				}
+			}
+		</script>
 	</body>
 </html>
