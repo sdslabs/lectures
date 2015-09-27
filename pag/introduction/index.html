@@ -36,22 +36,17 @@
 					<h1>PAG</h1>
 					<img class="image" src="pag.png" style="height:350px;"></img>
 				</section>
-				<section>
-					<section>	
-						<h2>WHAT IS PAG</h2>
-					</section>
-					<section>
-						PAG stands for PROGRAMMING And ALGORITHM GROUP
-					</section>
 				
-					<section>
-						<h2>WHAT IS AN ALGORITHM?</h2>
-						<p>
-							Algorithms are precise step-by-step instructions on how to accomplish a desired task.
-						</p>
-					</section>
+				<section>
+					<h2>WHAT IS AN ALGORITHM?</h2>
+					<p>
+						Algorithms are precise step-by-step instructions on how to accomplish a desired task.
+					</p>
+					
 
+					
 				</section>
+				
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
@@ -73,7 +68,6 @@
 					
 					
 				</section>
-
 				<section>
 					<h2>Why algorithm?</h2>
 					<ul>
@@ -201,28 +195,67 @@
 
  			     </section>
 
-			</section>	
-			<section>
-				<h3>Platforms To Get You Started</h3><br>
-				Codechef<br>
-				Codeforces<br>
-				Hacker Earth<br>
-				Hacker Rank<br>
-				SPOJ<br>
-            </section>
-            <section>
-				<section>
-					<h1>RECRUITMENTS</h1>
-				</section>
-				<section>
-					<h3>	Codeblitz	</h3>
-					Top 3 Get Direct Entry to the Interview.
-					</section>
-				<section>
-					<h3>	Recruitment Test	</h3>
-				</section>
 			</section>
+			
+			<section>
+            		<h1></h1>
+                  <h3>Problem Revisited...</h3>
+              </section>
+				<section>
+					<h1>INSERTION SORT</h1>
+					
+				</section>
 
+				<section >
+					<p>The Idea of the insertion sort is similer to the Idea of sorting the Playing cards .</p>
+					<img class="image" src="cards.png" style="height:500px;"></img>
+				</section>
+
+				<section >
+					<h2>Insertion Sort</h2>
+					<ul>
+						<li class= "fragment">while some elements unsorted:</li>
+						<ul>
+						<li class= "fragment">Using linear search, find the location in the sorted portion where the 1st element of the unsorted portion should be inserted </li>
+						<li class= "fragment">Move all the elements after the insertion location up one position to make space for the new element </li>
+				         </ul>
+						
+					</ul>
+					
+				</section>
+				<section>
+						<img class="image" src="sort.png" style="height:450px;"></img>
+									
+				</section>
+				
+				
+			
+
+<section>
+					Algorithm
+
+					<pre><code contenteditable style="margin-top: 20px;">&lt;insertionsort&gt;
+
+  	INSERTION-SORT (A)
+1  for j <- 2 to length[A]
+2       do key <- A[j]
+3         Insert A[j] into the sorted sequence A[1 . . j - 1].
+4        i <- j - 1
+5        while i > 0 and A[i] > key
+6           do A[i + 1] <- A[i]
+7              i <- i - 1
+8        A[i + 1] <- key
+
+       
+&lt;/insertionsort&gt;
+					</code></pre>
+				</section>
+
+			<section>
+			            		<h1></h1>
+
+                  <h3>Optimal solution to the problem</h3>
+              </section>
 				<section >
 					<h1>THE END</h1>
 					<a href="http://pag.sdslabs.co/blog/">http://pag.sdslabs.co/blog/</a>
@@ -244,7 +277,6 @@
 				history: true,
 				
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
-
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } }
